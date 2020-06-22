@@ -1,0 +1,19 @@
+.header {
+    background-color: whitesmoke;
+    height: 60px;
+    width: 100%;
+    position:fixed;
+    display: flex;
+    align-items: center;
+}
+
+.header a {
+    text-align: center;
+    margin-left: 15px;
+    color: black;
+    text-decoration: none;
+}
+
+.header a.active {
+    color:darkorange;
+}

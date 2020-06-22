@@ -1,0 +1,13 @@
+.dialogs {
+    margin-left: 250px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.dilogsItems {
+    padding: 10px;
+}
+
+.messages {
+    padding: 10px;
+}
