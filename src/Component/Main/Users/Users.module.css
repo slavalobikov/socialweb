@@ -3,3 +3,9 @@
     height: 1400px;
     background-color: greenyellow;
 }
+
+.content img {
+    width:150px;
+    height: 150px;
+    border-radius: 100px;
+}

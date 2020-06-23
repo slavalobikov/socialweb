@@ -10,6 +10,7 @@ import Users from "./Component/Main/Users/Users";
 import {Provider} from "react-redux";
 import store from "./Redux/ReduxStore"
 import MainContainer from "./Component/Main/Main/MainContainer";
+import UsersContainer from "./Component/Main/Users/UsersContainer";
 
 
 function App(props) {
@@ -22,7 +23,7 @@ function App(props) {
                 <Route path="/profile" render = { () => <MainContainer  />} />
 
                 <Route path="/dialogs" component={Dialogs} />
-                <Route path="/users" component={Users} />
+                <Route path="/users" component={UsersContainer} />
 
                 <Footer/>
 

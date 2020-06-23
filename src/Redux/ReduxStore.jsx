@@ -1,8 +1,10 @@
 import {applyMiddleware, combineReducers, createStore} from "redux";
 import ProfilePageReducer from "./Reducers/ProfileReducer";
+import UsersPageReducer from "./Reducers/UsersReducer";
 
 let reducers = combineReducers({
-    ProfilePageReducer
+    ProfilePageReducer,
+    UsersPageReducer
 });
 
 

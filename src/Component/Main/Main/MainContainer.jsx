@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Main from "./Main";
 import {connect} from "react-redux";
 import {ADD_NEW_POST_TEXT, UPDATE_NEW_POST_TEXT} from "../../../Redux/ActionTypes";

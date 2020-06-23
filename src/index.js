@@ -17,13 +17,7 @@ import store from "./Redux/ReduxStore"
                  <Provider store={store} >
                      <App  />
                  </Provider>
-
-
-
              </BrowserRouter>
-
-
-
          </React.StrictMode>,
          document.getElementById('root')
      );
@@ -31,10 +25,10 @@ import store from "./Redux/ReduxStore"
 
 rerenderEntireTree(store.getState());
 
-store.subscribe( () => {
+/*store.subscribe( () => {
     let state = store.getState();
     rerenderEntireTree(state);
-});
+});*/
 
 
 
