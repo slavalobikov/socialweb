@@ -1,7 +1,7 @@
 import React from 'react';
 import Main from "./Main";
 import {connect} from "react-redux";
-import {UPDATE_NEW_POST_TEXT} from "../../../Redux/ActionTypes";
+import {ADD_NEW_POST_TEXT, UPDATE_NEW_POST_TEXT} from "../../../Redux/ActionTypes";
 
 
 
@@ -28,6 +28,9 @@ let mapDispatchToProps = (dispatch) => {
     return {
         updateNewPostText:(text) => {
             dispatch(UPDATE_NEW_POST_TEXT(text))
+        },
+        addPost:() => {
+            dispatch(ADD_NEW_POST_TEXT())
         }
     }
 };
