@@ -2,23 +2,10 @@ import {ADD_NEW_POST_TEXT, FOLLOW_USER, FollowAC, UNFOLLOW_USER, UPDATE_NEW_POST
 
 
 let initialState = {
-    users:[
-        {
-            id:1,
-            name: "Валерий Цепкало",
-            img: "https://officelife.media/upload/iblock/a67/a673bdc2396a44e83b19b8a1665800d0.jpg",
-            isFollow:true,
-        },
-
-        {
-            id:2,
-            name: "Кто то там ",
-            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRu2LBJjEsly0ymeCNQw6XuoPorW7GZ4fGavSDeD-KZo9MT4l43&usqp=CAU",
-            isFollow:false,
-        },
-
-    ],
-
+    users:[],
+    pageSize:100,
+    totalUsers:0,
+    currentPage:1,
 };
 
 const UsersPageReducer = (state = initialState, action ) => {
@@ -48,6 +35,27 @@ const UsersPageReducer = (state = initialState, action ) => {
                 })
             }
         }
+        case SET_USERS: {
+            return  {
+
+                ...state,
+                users:action.users
+            }
+
+        }
+        case SET_CURRENT_PAGE: {
+            return {
+                ...state,
+                currentPage: action.currentPage
+            }
+        }
+        case SET_TOTAL_USERS_COUNT: {
+            return {
+                ...state,
+                totalUsers: action.totalCount
+            }
+        }
+
         default: return state;
     }
 
@@ -55,4 +63,12 @@ const UsersPageReducer = (state = initialState, action ) => {
 
 };
 
+
+export const setUsers = (users) => ({type:SET_USERS, users});
+export const setCurrent = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage});
+export const setTotalUsersCount = (totalCount) => ({type: SET_TOTAL_USERS_COUNT, totalCount})
+
+export const SET_USERS = "SET_USERS";
+const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
+const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
 export default UsersPageReducer;

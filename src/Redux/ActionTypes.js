@@ -1,3 +1,5 @@
+import {SET_USERS} from "./Reducers/UsersReducer";
+
 export const FOLLOW_USER = "FOLLOW_USER";
 export const UNFOLLOW_USER = "UNFOLLOW_USER";
 
@@ -28,3 +30,10 @@ export const UnFollowAC = (userID) => {
         userID
     }
 };
+
+export const setUsers = (users) => {
+    return {
+        type: SET_USERS,
+        users
+    }
+}
