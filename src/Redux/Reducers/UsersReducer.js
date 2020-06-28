@@ -6,6 +6,7 @@ let initialState = {
     pageSize:100,
     totalUsers:0,
     currentPage:1,
+    isFetching: true,
 };
 
 const UsersPageReducer = (state = initialState, action ) => {
@@ -55,6 +56,18 @@ const UsersPageReducer = (state = initialState, action ) => {
                 totalUsers: action.totalCount
             }
         }
+        case IS_FETCHING_TRUE: {
+            return {
+                ...state,
+                isFetching: true
+            }
+        }
+        case IS_FETCHING_FALSE: {
+            return {
+                ...state,
+                isFetching: false
+            }
+        }
 
         default: return state;
     }
@@ -66,9 +79,15 @@ const UsersPageReducer = (state = initialState, action ) => {
 
 export const setUsers = (users) => ({type:SET_USERS, users});
 export const setCurrent = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage});
-export const setTotalUsersCount = (totalCount) => ({type: SET_TOTAL_USERS_COUNT, totalCount})
+export const setTotalUsersCount = (totalCount) => ({type: SET_TOTAL_USERS_COUNT, totalCount});
+export const isFetchingTrue = () => ({type:IS_FETCHING_TRUE});
+export const isFetchingFalse = () => ({type:IS_FETCHING_FALSE});
+
+
 
 export const SET_USERS = "SET_USERS";
 const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
 const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
+const IS_FETCHING_TRUE = 'IS_FETCHING_TRUE';
+const IS_FETCHING_FALSE = 'IS_FETCHING_FALSE'
 export default UsersPageReducer;

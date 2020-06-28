@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77a2ed3f-7841-4e91-b137-6b75868cf242" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/common/Preloader.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Main/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Users/Users.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Main/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Users/UsersContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/Reducers/UsersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Reducers/UsersReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +65,16 @@
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
+    <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="npm start" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -72,6 +85,11 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.deploy" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -90,7 +108,7 @@
       <workItem from="1592842425179" duration="1924000" />
       <workItem from="1592844381107" duration="24285000" />
       <workItem from="1593256008824" duration="21853000" />
-      <workItem from="1593282533377" duration="768000" />
+      <workItem from="1593282533377" duration="5443000" />
     </task>
     <task id="LOCAL-00001" summary="update post text">
       <created>1592854599365</created>
@@ -120,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593282990282</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Follow/unfollow (visual)">
+      <created>1593283401659</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1593283401659</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,10 +166,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="454" y="175" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1592842342770" />
-    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1593282987421">
+    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1593283400459">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1593282987421" />
+    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1593283400459" />
     <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1592842477317">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -153,10 +178,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="563" y="263" width="261" height="201" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1592854438965" />
-    <state x="275" y="89" key="Vcs.Push.Dialog.v2" timestamp="1593282992628">
+    <state width="1345" height="392" key="GridCell.Tab.0.bottom" timestamp="1593284756371">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="89" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1593282992628" />
+    <state width="1345" height="392" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1593284756371" />
+    <state width="1345" height="392" key="GridCell.Tab.0.center" timestamp="1593284756371">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="392" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1593284756371" />
+    <state width="1345" height="392" key="GridCell.Tab.0.left" timestamp="1593284756370">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="392" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1593284756370" />
+    <state width="1345" height="392" key="GridCell.Tab.0.right" timestamp="1593284756371">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="392" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1593284756371" />
+    <state x="275" y="89" key="Vcs.Push.Dialog.v2" timestamp="1593283404031">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="89" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1593283404031" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1592915816386">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

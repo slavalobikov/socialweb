@@ -3,16 +3,24 @@ import React from "react"
 import Users from "./Users";
 import {FollowAC, UnFollowAC} from "../../../Redux/ActionTypes";
 import * as axios from 'axios';
-import {setCurrent, setTotalUsersCount, setUsers} from "../../../Redux/Reducers/UsersReducer";
+import {
+    isFetchingFalse,
+    isFetchingTrue,
+    setCurrent,
+    setTotalUsersCount,
+    setUsers
+} from "../../../Redux/Reducers/UsersReducer";
 import {getUsers} from "../../../api/api";
 
 
 class UsersContainer extends React.Component {
 
     componentDidMount() {
+            this.props.isFetchingTrue();
             getUsers(this.props.currentPage, this.props.pageSize ).then(response => {
             this.props.setUsers(response.items);
             this.props.setTotalUsersCount(response.totalCount);
+            this.props.isFetchingFalse();
         });
 
 
@@ -42,6 +50,7 @@ let mapStateToProps = (state) => {
         pageSize: state.UsersPageReducer.pageSize,
         totalUsers: state.UsersPageReducer.totalUsers,
         currentPage:state.UsersPageReducer.currentPage,
+        isFetching: state.UsersPageReducer.isFetching,
 
     }
 };
@@ -63,6 +72,12 @@ let mapDispatchToProps = (dispatch) => {
         },
         setTotalUsersCount:(totalCount) => {
             dispatch(setTotalUsersCount(totalCount))
+        },
+        isFetchingTrue:() => {
+            dispatch(isFetchingTrue())
+        },
+        isFetchingFalse:()=> {
+            dispatch(isFetchingFalse())
         }
     }
 };
