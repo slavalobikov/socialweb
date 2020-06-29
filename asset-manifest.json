@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/socialweb/static/css/main.334835aa.chunk.css",
-    "main.js": "/socialweb/static/js/main.72f47e04.chunk.js",
-    "main.js.map": "/socialweb/static/js/main.72f47e04.chunk.js.map",
+    "main.js": "/socialweb/static/js/main.ecc4dbfc.chunk.js",
+    "main.js.map": "/socialweb/static/js/main.ecc4dbfc.chunk.js.map",
     "runtime-main.js": "/socialweb/static/js/runtime-main.ce7187fe.js",
     "runtime-main.js.map": "/socialweb/static/js/runtime-main.ce7187fe.js.map",
-    "static/js/2.4f57763b.chunk.js": "/socialweb/static/js/2.4f57763b.chunk.js",
-    "static/js/2.4f57763b.chunk.js.map": "/socialweb/static/js/2.4f57763b.chunk.js.map",
+    "static/js/2.6526c034.chunk.js": "/socialweb/static/js/2.6526c034.chunk.js",
+    "static/js/2.6526c034.chunk.js.map": "/socialweb/static/js/2.6526c034.chunk.js.map",
     "index.html": "/socialweb/index.html",
-    "precache-manifest.a5e79dfa6fff68d902e0b8488df78676.js": "/socialweb/precache-manifest.a5e79dfa6fff68d902e0b8488df78676.js",
+    "precache-manifest.3073eead28ff3486d5f330b6f0dd7521.js": "/socialweb/precache-manifest.3073eead28ff3486d5f330b6f0dd7521.js",
     "service-worker.js": "/socialweb/service-worker.js",
     "static/css/main.334835aa.chunk.css.map": "/socialweb/static/css/main.334835aa.chunk.css.map",
-    "static/js/2.4f57763b.chunk.js.LICENSE.txt": "/socialweb/static/js/2.4f57763b.chunk.js.LICENSE.txt",
+    "static/js/2.6526c034.chunk.js.LICENSE.txt": "/socialweb/static/js/2.6526c034.chunk.js.LICENSE.txt",
     "static/media/logo.svg": "/socialweb/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.ce7187fe.js",
-    "static/js/2.4f57763b.chunk.js",
+    "static/js/2.6526c034.chunk.js",
     "static/css/main.334835aa.chunk.css",
-    "static/js/main.72f47e04.chunk.js"
+    "static/js/main.ecc4dbfc.chunk.js"
   ]
 }
