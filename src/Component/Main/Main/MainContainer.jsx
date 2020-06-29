@@ -6,13 +6,15 @@ import {ADD_NEW_POST_TEXT, UPDATE_NEW_POST_TEXT} from "../../../Redux/ActionType
 import {getProfile} from "../../../api/api";
 import {setPhotoUser} from "../../../Redux/Reducers/ProfileReducer";
 import {withRouter} from "react-router-dom";
+import {isFetchingFalse, isFetchingTrue} from "../../../Redux/Reducers/UsersReducer";
 
 
 class MainContainer extends React.Component {
     componentDidMount() {
-        debugger
+        this.props.isFetchingTrue();
         getProfile(this.props.match.params.userID).then(response =>{
             this.props.setPhotoUser(response.photos.large);
+            this.props.isFetchingFalse();
         })
     }
 
@@ -27,6 +29,7 @@ let mapStateToProps = (state) => ( {
     profilePage:state.ProfilePageReducer.profilePage,
     newPostText:state.ProfilePageReducer.newPostText,
     photo: state.ProfilePageReducer.photo,
+    isFetching: state.UsersPageReducer.isFetching,
 });
 
 let mapDispatchToProps = (dispatch) => {
@@ -39,6 +42,12 @@ let mapDispatchToProps = (dispatch) => {
         },
         setPhotoUser:(photo) => {
             dispatch(setPhotoUser(photo))
+        },
+        isFetchingTrue:() => {
+            dispatch(isFetchingTrue())
+        },
+        isFetchingFalse:()=> {
+            dispatch(isFetchingFalse())
         }
     }
 };
