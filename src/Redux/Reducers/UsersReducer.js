@@ -3,7 +3,7 @@ import {ADD_NEW_POST_TEXT, FOLLOW_USER, FollowAC, UNFOLLOW_USER, UPDATE_NEW_POST
 
 let initialState = {
     users:[],
-    pageSize:100,
+    pageSize:25,
     totalUsers:0,
     currentPage:1,
     isFetching: true,
