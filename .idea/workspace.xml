@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77a2ed3f-7841-4e91-b137-6b75868cf242" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Component/Header/HeaderContaine.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Redux/Reducers/AuthReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Header/Header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Main/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Users/Users.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Main/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Users/UsersContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/ActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/ActionTypes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Redux/Reducers/UsersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Reducers/UsersReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/ReduxStore.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/ReduxStore.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +110,7 @@
       <workItem from="1593256008824" duration="21853000" />
       <workItem from="1593282533377" duration="19732000" />
       <workItem from="1593431159846" duration="63000" />
-      <workItem from="1593431764148" duration="7788000" />
+      <workItem from="1593431764148" duration="19978000" />
     </task>
     <task id="LOCAL-00001" summary="update post text">
       <created>1592854599365</created>
@@ -174,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593426136974</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="login in Auth">
+      <created>1593439839732</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1593439839733</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,7 +188,8 @@
     <MESSAGE value="Preloader, isFetching" />
     <MESSAGE value="Profile photo in NavLink userID" />
     <MESSAGE value="Profile photo in NavLink userID with Preloader and photo of null" />
-    <option name="LAST_COMMIT_MESSAGE" value="Profile photo in NavLink userID with Preloader and photo of null" />
+    <MESSAGE value="login in Auth" />
+    <option name="LAST_COMMIT_MESSAGE" value="login in Auth" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="26" key="#Deployment" timestamp="1592854175292">
@@ -198,10 +200,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="454" y="175" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1592842342770" />
-    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1593439053247">
+    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1593439836431">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1593439053247" />
+    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1593439836431" />
     <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1592842477317">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -226,10 +228,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1345" height="392" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1593431090949" />
-    <state x="275" y="89" key="Vcs.Push.Dialog.v2" timestamp="1593426139345">
+    <state x="275" y="89" key="Vcs.Push.Dialog.v2" timestamp="1593451524683">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="89" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1593426139345" />
+    <state x="275" y="89" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1593451524683" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1593435112109">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

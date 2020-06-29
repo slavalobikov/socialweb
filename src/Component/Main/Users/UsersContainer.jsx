@@ -10,6 +10,8 @@ import {
     setUsers, unfollow
 } from "../../../Redux/Reducers/UsersReducer";
 import {getUsers} from "../../../api/api";
+import {followUser} from "./../../../api/api";
+import {unfollowUser} from "./../../../api/api"
 
 
 class UsersContainer extends React.Component {
@@ -35,7 +37,7 @@ class UsersContainer extends React.Component {
             pages.push(i);
         }
         return (
-             <Users {...this.props}  pages={pages}   />
+             <Users {...this.props}  pages={pages} followUser={followUser} unfollowUser={unfollowUser}  />
             )
 
     }

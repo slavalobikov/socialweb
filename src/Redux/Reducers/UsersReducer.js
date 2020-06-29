@@ -9,6 +9,7 @@ let initialState = {
     isFetching: true,
 };
 
+
 const UsersPageReducer = (state = initialState, action ) => {
 
 
@@ -18,7 +19,7 @@ const UsersPageReducer = (state = initialState, action ) => {
                 ...state,
                 users: state.users.map (u => {
                     if (u.id === action.userID) {
-                        return {...u, isFollow:true}
+                        return {...u, followed:true}
                     }
                     return u;
                 })
@@ -30,7 +31,7 @@ const UsersPageReducer = (state = initialState, action ) => {
                 ...state,
                 users:state.users.map (u => {
                     if (u.id === action.userID) {
-                        return {...u, isFollow:false }
+                        return {...u, followed:false }
                     }
                     return u;
                 })
