@@ -9,13 +9,14 @@ import {BrowserRouter, Route} from "react-router-dom";
 
 import MainContainer from "./Component/Main/Main/MainContainer";
 import UsersContainer from "./Component/Main/Users/UsersContainer";
+import HeaderContainer from "./Component/Header/HeaderContaine";
 
 
 function App(props) {
 
     return (
             <div className="App">
-                <Header/>
+                <HeaderContainer />
 
 
                 <Route path='/profile/:userID?' render = { () => <MainContainer  />} />

@@ -26,3 +26,17 @@ export const getProfile = (userID) => {
         return response.data
     })
 };
+
+export const getPhotoAuth = (uID) => {
+    return axios.get(`${URL}profile/${uID}`).then(response => {
+        return response.data
+    })
+}
+
+export const authme = () => {
+    return axios.get(`${URL}/auth/me`, {
+        withCredentials: true
+    }).then(response => {
+        return response.data
+    })
+};

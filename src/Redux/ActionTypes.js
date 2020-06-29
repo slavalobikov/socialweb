@@ -1,7 +1,6 @@
 import {SET_USERS} from "./Reducers/UsersReducer";
 
-export const FOLLOW_USER = "FOLLOW_USER";
-export const UNFOLLOW_USER = "UNFOLLOW_USER";
+
 
 export const UPDATE_NEW_POST_TEXT = (text) => {
     return {
@@ -17,23 +16,10 @@ export const ADD_NEW_POST_TEXT = () => {
 };
 
 
-export const FollowAC = (userID) => {
-  return {
-      type:FOLLOW_USER,
-      userID
-  }
-};
-
-export const UnFollowAC = (userID) => {
-    return {
-        type:UNFOLLOW_USER,
-        userID
-    }
-};
 
 export const setUsers = (users) => {
     return {
         type: SET_USERS,
         users
     }
-}
+};

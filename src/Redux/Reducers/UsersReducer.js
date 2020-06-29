@@ -1,4 +1,4 @@
-import {ADD_NEW_POST_TEXT, FOLLOW_USER, FollowAC, UNFOLLOW_USER, UPDATE_NEW_POST_TEXT} from "../ActionTypes";
+import {ADD_NEW_POST_TEXT,  FollowAC,  UPDATE_NEW_POST_TEXT} from "../ActionTypes";
 
 
 let initialState = {
@@ -82,12 +82,28 @@ export const setCurrent = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage
 export const setTotalUsersCount = (totalCount) => ({type: SET_TOTAL_USERS_COUNT, totalCount});
 export const isFetchingTrue = () => ({type:IS_FETCHING_TRUE});
 export const isFetchingFalse = () => ({type:IS_FETCHING_FALSE});
+export const follow = (userID) => {
+    return {
+        type:FOLLOW_USER,
+        userID
+    }
+};
+export const unfollow = (userID) => {
+    return {
+        type:UNFOLLOW_USER,
+        userID
+    }
+};
+
 
 
 
 export const SET_USERS = "SET_USERS";
+
+ const FOLLOW_USER = "FOLLOW_USER";
+ const UNFOLLOW_USER = "UNFOLLOW_USER";
 const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
 const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
 const IS_FETCHING_TRUE = 'IS_FETCHING_TRUE';
-const IS_FETCHING_FALSE = 'IS_FETCHING_FALSE'
+const IS_FETCHING_FALSE = 'IS_FETCHING_FALSE';
 export default UsersPageReducer;

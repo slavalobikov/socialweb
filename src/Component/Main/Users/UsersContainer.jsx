@@ -1,14 +1,13 @@
 import {connect} from "react-redux";
 import React from "react"
 import Users from "./Users";
-import {FollowAC, UnFollowAC} from "../../../Redux/ActionTypes";
-import * as axios from 'axios';
 import {
+    follow,
     isFetchingFalse,
     isFetchingTrue,
     setCurrent,
     setTotalUsersCount,
-    setUsers
+    setUsers, unfollow
 } from "../../../Redux/Reducers/UsersReducer";
 import {getUsers} from "../../../api/api";
 
@@ -35,7 +34,6 @@ class UsersContainer extends React.Component {
         for (let i =1; i<= pagesCount; i++) {
             pages.push(i);
         }
-        debugger
         return (
              <Users {...this.props}  pages={pages}   />
             )
@@ -55,14 +53,13 @@ let mapStateToProps = (state) => {
     }
 };
 
-
-let mapDispatchToProps = (dispatch) => {
+/*let mapDispatchToProps = (dispatch) => {
     return {
         follow:(userID) => {
-            dispatch(FollowAC(userID));
+            dispatch(follow(userID));
         },
         unfollow:(userID) => {
-            dispatch(UnFollowAC(userID));
+            dispatch(unfollow(userID));
         },
         setUsers:(users) => {
             dispatch(setUsers(users));
@@ -80,6 +77,14 @@ let mapDispatchToProps = (dispatch) => {
             dispatch(isFetchingFalse())
         }
     }
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(UsersContainer);
+};*/
+export default connect(mapStateToProps, {
+    follow,
+    unfollow,
+    setUsers,
+    setCurrent,
+    setTotalUsersCount,
+    isFetchingTrue,
+    isFetchingFalse,
+    }
+)(UsersContainer);
