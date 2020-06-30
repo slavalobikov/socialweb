@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from "./Header";
 import {connect} from "react-redux";
-import {isAuthBool, setUserData} from "../../Redux/Reducers/AuthReducer";
+import {authmeThunk, isAuthBool, setUserData} from "../../Redux/Reducers/AuthReducer";
 import {authme, getProfile} from "../../api/api";
 import {setPhotoUser} from "../../Redux/Reducers/ProfileReducer";
 
@@ -9,7 +9,8 @@ import {setPhotoUser} from "../../Redux/Reducers/ProfileReducer";
 class HeaderContainer extends React.Component {
 
     componentDidMount() {
-
+        this.props.authmeThunk();
+/*
         authme().then(response => {
 
                 if (response.resultCode === 0) {
@@ -18,6 +19,7 @@ class HeaderContainer extends React.Component {
 
                 }
         })
+*/
 
     }
 
@@ -39,6 +41,7 @@ let mapStateToProps = (state) => {
 export default connect(mapStateToProps, {
     setUserData,
     setPhotoUser,
+    authmeThunk,
 
 
 })(HeaderContainer);

@@ -3,10 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="77a2ed3f-7841-4e91-b137-6b75868cf242" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Header/HeaderContaine.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Header/HeaderContaine.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Main/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Users/Users.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Main/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Users/UsersContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/Reducers/AuthReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Reducers/AuthReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Redux/Reducers/UsersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Reducers/UsersReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/ReduxStore.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/ReduxStore.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +41,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Component/Header" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -110,7 +112,8 @@
       <workItem from="1593256008824" duration="21853000" />
       <workItem from="1593282533377" duration="19732000" />
       <workItem from="1593431159846" duration="63000" />
-      <workItem from="1593431764148" duration="24643000" />
+      <workItem from="1593431764148" duration="27285000" />
+      <workItem from="1593540707583" duration="3672000" />
     </task>
     <task id="LOCAL-00001" summary="update post text">
       <created>1592854599365</created>
@@ -182,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593466972222</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="disabled button">
+      <created>1593531064779</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1593531064779</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,7 +207,8 @@
     <MESSAGE value="Profile photo in NavLink userID with Preloader and photo of null" />
     <MESSAGE value="login in Auth" />
     <MESSAGE value="follow/unfollow with API SERVER and with govnokod" />
-    <option name="LAST_COMMIT_MESSAGE" value="follow/unfollow with API SERVER and with govnokod" />
+    <MESSAGE value="disabled button" />
+    <option name="LAST_COMMIT_MESSAGE" value="disabled button" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="26" key="#Deployment" timestamp="1592854175292">
@@ -208,10 +219,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="454" y="175" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1592842342770" />
-    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1593466969454">
+    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1593531062791">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1593466969454" />
+    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1593531062791" />
     <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1592842477317">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -220,26 +231,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="563" y="263" width="261" height="201" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1592854438965" />
-    <state width="1345" height="392" key="GridCell.Tab.0.bottom" timestamp="1593431090949">
+    <state width="1345" height="392" key="GridCell.Tab.0.bottom" timestamp="1593544611424">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="392" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1593431090949" />
-    <state width="1345" height="392" key="GridCell.Tab.0.center" timestamp="1593431090949">
+    <state width="1345" height="392" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1593544611424" />
+    <state width="1345" height="392" key="GridCell.Tab.0.center" timestamp="1593544611423">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="392" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1593431090949" />
-    <state width="1345" height="392" key="GridCell.Tab.0.left" timestamp="1593431090949">
+    <state width="1345" height="392" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1593544611423" />
+    <state width="1345" height="392" key="GridCell.Tab.0.left" timestamp="1593544611422">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="392" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1593431090949" />
-    <state width="1345" height="392" key="GridCell.Tab.0.right" timestamp="1593431090949">
+    <state width="1345" height="392" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1593544611422" />
+    <state width="1345" height="392" key="GridCell.Tab.0.right" timestamp="1593544611423">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="392" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1593431090949" />
-    <state x="275" y="89" key="Vcs.Push.Dialog.v2" timestamp="1593466977624">
+    <state width="1345" height="392" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1593544611423" />
+    <state x="275" y="89" key="Vcs.Push.Dialog.v2" timestamp="1593531068155">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="89" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1593466977624" />
+    <state x="275" y="89" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1593531068155" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1593435112109">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

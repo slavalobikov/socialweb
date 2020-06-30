@@ -1,4 +1,4 @@
-import {ADD_NEW_POST_TEXT,  FollowAC,  UPDATE_NEW_POST_TEXT} from "../ActionTypes";
+import {followUser, getUsers, unfollowUser} from "../../api/api";
 
 
 
@@ -120,5 +120,55 @@ const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
 const IS_FETCHING_TRUE = 'IS_FETCHING_TRUE';
 const IS_FETCHING_FALSE = 'IS_FETCHING_FALSE';
 const IS_DISABLED = 'IS_DISABLED';
+
+export const getUserAC = (currentPage, pageSize) => {
+    return (dispatch) => {
+        dispatch(isFetchingTrue());
+    getUsers(currentPage, pageSize ).then(response => {
+        dispatch(setUsers(response.items));
+        dispatch(setTotalUsersCount(response.totalCount));
+        dispatch(isFetchingFalse());
+
+    });
+    }
+
+
+};
+
+export const followUserThunk = (id) => {
+    return (dispatch) => {
+        dispatch(isDisabled(true, id))
+        followUser(id).then(response => {
+            if (response == 0) {
+                dispatch(follow(id))
+            }
+            dispatch(isDisabled(false, id))
+        })
+    }
+};
+export const unfollowUserThunk = (id)=> {
+    return (dispatch) => {
+        dispatch(isDisabled(true, id));
+        unfollowUser(id).then(response => {
+                if (response == 0) {
+                    dispatch(unfollow(id))
+                }
+                dispatch(isDisabled(false, id))
+            }
+        );
+    }
+};
+export const onPageChangedThunk = (pageNumber, pageSize) => {
+    return (dispatch) => {
+        dispatch(isFetchingTrue());
+        dispatch(setCurrent(pageNumber));
+        getUsers(pageNumber, pageSize )
+            .then(response => {
+                dispatch(setUsers(response.items));
+                dispatch(isFetchingFalse());
+            });
+
+    }
+}
 
 export default UsersPageReducer;

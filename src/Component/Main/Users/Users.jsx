@@ -1,41 +1,19 @@
 import React from 'react';
 import s from './Users.module.css'
-import {followUser, getUsers, unfollowUser} from "../../../api/api";
+
 import Preloader from "../../../common/Preloader";
 import {NavLink} from "react-router-dom";
 
 const Users = (props) => {
+
     let fUser = (id) => {
-        props.isDisabled(true, id)
-        followUser(id).then(response => {
-            if (response == 0) {
-                props.follow(id)
-            }
-        props.isDisabled(false, id)
-        })
+        props.followUserThunk(id);
     };
     let unfUser = (id) => {
-        props.isDisabled(true, id);
-        unfollowUser(id).then(response => {
-            if (response == 0) {
-                props.unfollow(id)
-            }
-                props.isDisabled(false, id)
-        }
-        );
-
+    props.unfollowUserThunk(id)
     };
-
     let onPageChanged = (pageNumber) => {
-
-        props.isFetchingTrue();
-        props.setCurrent(pageNumber);
-            getUsers(pageNumber, props.pageSize )
-            .then(response => {
-                props.setUsers(response.items);
-                props.isFetchingFalse();
-            });
-
+        props.onPageChangedThunk(pageNumber, props.pageSize)
     };
 
     let pages = props.pages.map ( p => <div onClick={ (e) => onPageChanged(p) } className={ props.currentPage === p && s.selectedPage  } >{p}</div>  );

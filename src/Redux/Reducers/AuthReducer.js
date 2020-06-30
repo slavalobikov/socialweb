@@ -1,3 +1,5 @@
+import {authme} from "../../api/api";
+
 const SET_USER_DATA = 'SET_USER_DATA';
 const IS_AUTH_BOOL = 'IS_AUTH_BOOL';
 
@@ -23,5 +25,18 @@ const AuthPageReducer = (state = initialState, action) => {
 };
 
 export const setUserData = (id, email, login) => ({type:SET_USER_DATA, data:{id, email, login} });
+
+export const authmeThunk = () => {
+    return (dispatch) => {
+        authme().then(response => {
+            if (response.resultCode === 0) {
+                setUserData(dispatch(setUserData(response.data.id, response.data.email, response.data.login)))
+            }
+        })
+
+    }
+};
+
+
 
 export default AuthPageReducer;
