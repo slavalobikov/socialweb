@@ -49,20 +49,14 @@ export const authme = () => {
 
 export const followUser = (userID) => {
     return instance.post(`follow/${userID}`).then(response => {
-        debugger
         return response.data.resultCode
     })
 };
 
 export const unfollowUser = (userID) => {
-    return instance.delete(`follow/${userID}`)
+    return instance.delete(`follow/${userID}`).then(response => {
+        return response.data.resultCode
+    })
 };
 
 
-/*
-export const postFriend = (id) => {
-    return instance.post(`follow/${id}`)
-        .then (response => {
-            return response.data.resultCode
-        })
-    }*/

@@ -1,12 +1,14 @@
 import {ADD_NEW_POST_TEXT,  FollowAC,  UPDATE_NEW_POST_TEXT} from "../ActionTypes";
 
 
+
 let initialState = {
     users:[],
     pageSize:25,
     totalUsers:0,
     currentPage:1,
     isFetching: true,
+    isDisabled:[],
 };
 
 
@@ -69,7 +71,14 @@ const UsersPageReducer = (state = initialState, action ) => {
                 isFetching: false
             }
         }
-
+        case IS_DISABLED: {
+            return {
+                ...state,
+                isDisabled: action.bool
+                    ? [...state.isDisabled, action.id]
+                    : state.isDisabled.filter(id => id != action.id)
+            }
+        }
         default: return state;
     }
 
@@ -95,16 +104,21 @@ export const unfollow = (userID) => {
         userID
     }
 };
+export const isDisabled = (bool, id) => {
+    return ({type:IS_DISABLED, bool, id})
+};
 
 
 
 
 export const SET_USERS = "SET_USERS";
 
- const FOLLOW_USER = "FOLLOW_USER";
- const UNFOLLOW_USER = "UNFOLLOW_USER";
+const FOLLOW_USER = "FOLLOW_USER";
+const UNFOLLOW_USER = "UNFOLLOW_USER";
 const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
 const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
 const IS_FETCHING_TRUE = 'IS_FETCHING_TRUE';
 const IS_FETCHING_FALSE = 'IS_FETCHING_FALSE';
+const IS_DISABLED = 'IS_DISABLED';
+
 export default UsersPageReducer;

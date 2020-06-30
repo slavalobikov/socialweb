@@ -2,7 +2,7 @@ import {connect} from "react-redux";
 import React from "react"
 import Users from "./Users";
 import {
-    follow,
+    follow, isDisabled,
     isFetchingFalse,
     isFetchingTrue,
     setCurrent,
@@ -51,6 +51,7 @@ let mapStateToProps = (state) => {
         totalUsers: state.UsersPageReducer.totalUsers,
         currentPage:state.UsersPageReducer.currentPage,
         isFetching: state.UsersPageReducer.isFetching,
+        Disabled:state.UsersPageReducer.isDisabled,
 
     }
 };
@@ -88,5 +89,6 @@ export default connect(mapStateToProps, {
     setTotalUsersCount,
     isFetchingTrue,
     isFetchingFalse,
+    isDisabled
     }
 )(UsersContainer);

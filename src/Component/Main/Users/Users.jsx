@@ -1,13 +1,30 @@
 import React from 'react';
 import s from './Users.module.css'
-import {getUsers} from "../../../api/api";
+import {followUser, getUsers, unfollowUser} from "../../../api/api";
 import Preloader from "../../../common/Preloader";
 import {NavLink} from "react-router-dom";
-import * as axios from "axios";
 
 const Users = (props) => {
+    let fUser = (id) => {
+        props.isDisabled(true, id)
+        followUser(id).then(response => {
+            if (response == 0) {
+                props.follow(id)
+            }
+        props.isDisabled(false, id)
+        })
+    };
+    let unfUser = (id) => {
+        props.isDisabled(true, id);
+        unfollowUser(id).then(response => {
+            if (response == 0) {
+                props.unfollow(id)
+            }
+                props.isDisabled(false, id)
+        }
+        );
 
-    debugger
+    };
 
     let onPageChanged = (pageNumber) => {
 
@@ -36,42 +53,12 @@ const Users = (props) => {
                                 src={!u.photos.large ? 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/VK.com-logo.svg/1200px-VK.com-logo.svg.png' : u.photos.large}
                                 alt={u.name}/></div>
                             </NavLink>
-                            {console.log(u.isFollow)}
                             {u.followed
-                                ? <button /*onClick={/!*() => props.unfollowUser(u.id).then(response => {
-                                    if (response === 0) {
-                                        return props.follow(u.id)
-                                    }
-                                })*!/}*/
-                                    onClick={() =>{ axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`,
-                                        {withCredentials:true,
-                                        headers:{
-                                            "API-KEY":"be820c73-af0b-4ffa-9553-5bd0d04425d6"
-                                        }}).then(response => {
-                                                debugger
-                                            if (response.data.resultCode == 0) {
-                                                props.unfollow(u.id)
-
-                                            }
-                                    })} }> Отписаться </button>
-                                : <button /*onClick={() => props.unfollowUser(u.id).then(response => {
-                                    if (response === 0) {
-
-                                        props.unfollow(u.id)
-                                    }
-                                })}*/
-                                    onClick={() =>{ axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {},
-                                        {withCredentials:true,
-                                            headers:{
-                                                "API-KEY":"be820c73-af0b-4ffa-9553-5bd0d04425d6"
-                                            }}).then(response => {
-
-                                        if (response.data.resultCode == 0) {
-                                            props.follow(u.id)
-
-                                        }
-                                    })} }
-                                > Подписаться </button>}</div>
+                                ? <button disabled={props.Disabled.some(id => id === u.id)}
+                                    onClick={() => unfUser(u.id) }> Отписаться </button>
+                                : <button disabled={props.Disabled.some(id => id === u.id)}
+                                    onClick={ () => fUser(u.id) }> Подписаться </button>}
+                        </div>
                     )
                     }
                 </div>}
