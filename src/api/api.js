@@ -59,4 +59,8 @@ export const unfollowUser = (userID) => {
     })
 };
 
-
+export const getStatus = (userID) => {
+    return instance.get(`profile/status/${userID}`).then (response => {
+        return response.data
+    })
+};

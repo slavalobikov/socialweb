@@ -23,7 +23,7 @@ const Main = (props) => {
             : <img src={!props.photo ? 'https://img8.eadaily.com/r650x450/o/7ac/95f49146b4501082acd22918d4cc2.jpg' : props.photo}
                    alt=""/>
             }
-
+                <div>Status:{props.status || <span>3% </span> }</div>
             <textarea value={props.newPostText} onChange={onChange}> </textarea>  <button onClick={ addPost } >Отрправить </button>
             {PostElement}
         </div>
