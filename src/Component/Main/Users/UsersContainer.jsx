@@ -13,6 +13,7 @@ import {
 import {followUser} from "./../../../api/api";
 import {unfollowUser} from "./../../../api/api"
 import {withAuthRedirect} from "../../../hoc/withAuthRedirect";
+import {compose} from "redux";
 
 
 class UsersContainer extends React.Component {
@@ -46,11 +47,22 @@ let mapStateToProps = (state) => {
     }
 };
 
+export default compose(
+    connect(mapStateToProps, {
+        getUserAC,
+        followUserThunk,
+        unfollowUserThunk,
+        onPageChangedThunk,
+    }
+    ),
+    withAuthRedirect,
+)(UsersContainer)
 
+/*
 export default withAuthRedirect(connect(mapStateToProps, {
     getUserAC,
     followUserThunk,
     unfollowUserThunk,
     onPageChangedThunk,
     }
-)(UsersContainer));
+)(UsersContainer));*/
