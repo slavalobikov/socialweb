@@ -7,6 +7,7 @@ import {getProfile} from "../../../api/api";
 import {setPhotoUser} from "../../../Redux/Reducers/ProfileReducer";
 import {withRouter} from "react-router-dom";
 import {isFetchingFalse, isFetchingTrue} from "../../../Redux/Reducers/UsersReducer";
+import {withAuthRedirect} from "../../../hoc/withAuthRedirect";
 
 
 class MainContainer extends React.Component {
@@ -52,7 +53,9 @@ let mapDispatchToProps = (dispatch) => {
     }
 };
 
-let withURLDataContainerComponent = withRouter (MainContainer);
+let withAuthRedirectCC = withAuthRedirect(MainContainer)
+
+let withURLDataContainerComponent = withRouter (withAuthRedirectCC);
 
 export default connect(mapStateToProps, mapDispatchToProps)(withURLDataContainerComponent)
 

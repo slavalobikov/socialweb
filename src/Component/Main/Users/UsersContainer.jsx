@@ -12,6 +12,7 @@ import {
 
 import {followUser} from "./../../../api/api";
 import {unfollowUser} from "./../../../api/api"
+import {withAuthRedirect} from "../../../hoc/withAuthRedirect";
 
 
 class UsersContainer extends React.Component {
@@ -46,18 +47,10 @@ let mapStateToProps = (state) => {
 };
 
 
-export default connect(mapStateToProps, {
-/*    follow,
-    unfollow,
-    setUsers,
-    setCurrent,
-    setTotalUsersCount,
-    isFetchingTrue,
-    isFetchingFalse,
-    isDisabled,*/
+export default withAuthRedirect(connect(mapStateToProps, {
     getUserAC,
     followUserThunk,
     unfollowUserThunk,
     onPageChangedThunk,
     }
-)(UsersContainer);
+)(UsersContainer));
