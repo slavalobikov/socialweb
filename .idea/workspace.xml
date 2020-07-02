@@ -3,11 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="77a2ed3f-7841-4e91-b137-6b75868cf242" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Main/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Main/Main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Main/MainContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Main/MainContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Main/Status/Status.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Main/Status/Status.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Reducers/ProfileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Reducers/ProfileReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Main/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Main/Login/Login.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Login/Login.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/ReduxStore.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/ReduxStore.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +114,8 @@
       <workItem from="1593431159846" duration="63000" />
       <workItem from="1593431764148" duration="27285000" />
       <workItem from="1593540707583" duration="27063000" />
-      <workItem from="1593694894077" duration="2930000" />
+      <workItem from="1593694894077" duration="3713000" />
+      <workItem from="1593718987773" duration="2078000" />
     </task>
     <task id="LOCAL-00001" summary="update post text">
       <created>1592854599365</created>
@@ -234,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593682688092</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Update Status">
+      <created>1593702957970</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1593702957970</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,7 +265,8 @@
     <MESSAGE value="get User STatus" />
     <MESSAGE value="status" />
     <MESSAGE value="API object" />
-    <option name="LAST_COMMIT_MESSAGE" value="API object" />
+    <MESSAGE value="Update Status" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Status" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="26" key="#Deployment" timestamp="1592854175292">
@@ -267,10 +277,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="454" y="175" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1592842342770" />
-    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1593682685650">
+    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1593702953616">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1593682685650" />
+    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1593702953616" />
     <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1592842477317">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -295,10 +305,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1345" height="392" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1593692250407" />
-    <state x="275" y="89" key="Vcs.Push.Dialog.v2" timestamp="1593682704412">
+    <state x="275" y="89" key="Vcs.Push.Dialog.v2" timestamp="1593702975394">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="89" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1593682704412" />
+    <state x="275" y="89" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1593702975394" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1593696297125">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
