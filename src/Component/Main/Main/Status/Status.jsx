@@ -3,26 +3,36 @@ import React from "react";
 class Status extends React.Component {
 
     state = {
-        editMode:true
+        editMode:false,
+        status: this.props.status
     };
 
+    activateEditeMode = () => {
+      this.setState({
+          editMode:true
+      })
+    };
 
+    deactivateEditeMode = () => {
+        this.setState({
+            editMode:false
+        });
+        this.props.updateStatus(this.state.status);
+    };
+    onStatusChange = (e) => {
+        this.setState({
+            status:e.currentTarget.value
 
-
+    })
+    };
 
     render() {
-        let editMode = () => {
-            this.setState({
-                editMode:!this.state.editMode
-            })
-
-        }
-
+        debugger
         return (
             <div>
                 {this.state.editMode
-                ? <div onClick={editMode} >Status:{this.props.status || <span>3% </span> }</div>
-                : <div><input onBlur={editMode} autoFocus={true} value={this.props.status} /></div>
+                ? <div><input onChange={this.onStatusChange}  onBlur={this.deactivateEditeMode} autoFocus={true} value={this.state.status} /></div>
+                : <div onClick={this.activateEditeMode} >Status:{this.props.status || <span>3% </span> }</div>
                 }
             </div>
 

@@ -5,8 +5,8 @@ import {follow, isDisabled, isFetchingFalse, isFetchingTrue} from "./UsersReduce
 const SET_STATUS_USER = "SET_STATUS_USER"
 
 const SET_PHOTO_USER = 'SET_PHOTO_USER';
-
 let initialState = {
+
     profilePage:[
         {
             id:1,
@@ -33,7 +33,6 @@ let initialState = {
 };
 
 const ProfilePageReducer = (state = initialState, action ) => {
-
     switch (action.type) {
         case UPDATE_NEW_POST_TEXT: {
             return {
@@ -90,26 +89,23 @@ export const getStatusThunk = (status) => {
 export const getProfileThunk = (userID) => {
     return (dispatch) => {
         dispatch(isFetchingTrue());
-        profileAPI.getProfile(/*this.props.match.params.userID*/ userID).then(response =>{
+        profileAPI.getProfile(userID).then(response =>{
             dispatch(setPhotoUser(response.photos.large));
             dispatch(isFetchingFalse());
-            //
             dispatch(getStatusThunk(userID))
         })
     }
 
-}
+};
 
-/*export const followUserThunk = (id) => {
+export const updateStatusThunk = (status) => {
     return (dispatch) => {
-        dispatch(isDisabled(true, id))
-        followUser(id).then(response => {
-            if (response == 0) {
-                dispatch(follow(id))
+        profileAPI.updateStatus(status).then(response => {
+            if (response.data.resultCode === 0) {
+                dispatch(setStatusUser(status))
             }
-            dispatch(isDisabled(false, id))
         })
     }
-};*/
+};
 
 export default ProfilePageReducer;

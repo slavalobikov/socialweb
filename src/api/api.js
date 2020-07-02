@@ -13,36 +13,6 @@ const instance = axios.create({
 
 
 
-/*
-
-export const getProfile = (userID) => {
-    return instance.get(`profile/${userID}`).then(response => {
-        return response.data
-    })
-};
-*/
-
-/*export const getPhotoAuth = (uID) => {
-    return instance.get(`profile/${uID}`).then(response => {
-        return response.data
-    })
-};*/
-
-/*export const authme = () => {
-    return instance.get(`auth/me`).then(response => {
-        return response.data
-    })
-};*/
-
-
-/*
-export const getStatus = (userID) => {
-    return instance.get(`profile/status/${userID}`).then (response => {
-        return response.data
-    })
-};
-*/
-
 
 export const userAPI = {
     getUsers(currentPage = 1, pageSize) {
@@ -79,10 +49,15 @@ export const profileAPI = {
         return instance.get(`profile/status/${userID}`).then (response => {
             return response.data
         })
-},
+    },
     getProfile(userID){
         return instance.get(`profile/${userID}`).then(response => {
             return response.data
         })
+    },
+    updateStatus(setStatus) {
+        return instance.put(`profile/status`, {status: setStatus}).then(response =>{
+            return response
+        })
     }
-}
+};
