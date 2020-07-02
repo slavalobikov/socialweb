@@ -1,4 +1,4 @@
-import {followUser, getUsers, unfollowUser} from "../../api/api";
+import {followUser, getUsers, unfollowUser, userAPI} from "../../api/api";
 
 
 
@@ -124,7 +124,7 @@ const IS_DISABLED = 'IS_DISABLED';
 export const getUserAC = (currentPage, pageSize) => {
     return (dispatch) => {
         dispatch(isFetchingTrue());
-    getUsers(currentPage, pageSize ).then(response => {
+    userAPI.getUsers(currentPage, pageSize ).then(response => {
         dispatch(setUsers(response.items));
         dispatch(setTotalUsersCount(response.totalCount));
         dispatch(isFetchingFalse());
@@ -138,7 +138,7 @@ export const getUserAC = (currentPage, pageSize) => {
 export const followUserThunk = (id) => {
     return (dispatch) => {
         dispatch(isDisabled(true, id))
-        followUser(id).then(response => {
+        userAPI.followUser(id).then(response => {
             if (response == 0) {
                 dispatch(follow(id))
             }
@@ -149,7 +149,7 @@ export const followUserThunk = (id) => {
 export const unfollowUserThunk = (id)=> {
     return (dispatch) => {
         dispatch(isDisabled(true, id));
-        unfollowUser(id).then(response => {
+        userAPI.unfollowUser(id).then(response => {
                 if (response == 0) {
                     dispatch(unfollow(id))
                 }
@@ -162,7 +162,7 @@ export const onPageChangedThunk = (pageNumber, pageSize) => {
     return (dispatch) => {
         dispatch(isFetchingTrue());
         dispatch(setCurrent(pageNumber));
-        getUsers(pageNumber, pageSize )
+        userAPI.getUsers(pageNumber, pageSize )
             .then(response => {
                 dispatch(setUsers(response.items));
                 dispatch(isFetchingFalse());

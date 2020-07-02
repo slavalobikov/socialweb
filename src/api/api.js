@@ -12,55 +12,77 @@ const instance = axios.create({
 })
 
 
+
 /*
-export const getUsers = (currentPage = 1, pageSize) => {
-    return axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${currentPage}&count=${pageSize}`)
-        .then(response => {
-          return response.data
-        });
-
-};*/
-
-export const getUsers = (currentPage = 1, pageSize) => {
-    return instance.get(`users?page=${currentPage}&count=${pageSize}`)
-        .then(response => {
-            return response.data
-        });
-
-};
 
 export const getProfile = (userID) => {
     return instance.get(`profile/${userID}`).then(response => {
         return response.data
     })
 };
+*/
 
-export const getPhotoAuth = (uID) => {
+/*export const getPhotoAuth = (uID) => {
     return instance.get(`profile/${uID}`).then(response => {
         return response.data
     })
-};
+};*/
 
-export const authme = () => {
+/*export const authme = () => {
     return instance.get(`auth/me`).then(response => {
         return response.data
     })
-};
+};*/
 
-export const followUser = (userID) => {
-    return instance.post(`follow/${userID}`).then(response => {
-        return response.data.resultCode
-    })
-};
 
-export const unfollowUser = (userID) => {
-    return instance.delete(`follow/${userID}`).then(response => {
-        return response.data.resultCode
-    })
-};
-
+/*
 export const getStatus = (userID) => {
     return instance.get(`profile/status/${userID}`).then (response => {
         return response.data
     })
 };
+*/
+
+
+export const userAPI = {
+    getUsers(currentPage = 1, pageSize) {
+        return instance.get(`users?page=${currentPage}&count=${pageSize}`)
+            .then(response => {
+                return response.data
+            })
+
+    },
+    followUser(userID) {
+        return instance.post(`follow/${userID}`).then(response => {
+            return response.data.resultCode
+        })
+    },
+    unfollowUser(userID) {
+        return instance.delete(`follow/${userID}`).then(response => {
+            return response.data.resultCode
+        })
+    }
+
+};
+
+export const authAPI  = {
+    authme() {
+        return instance.get(`auth/me`).then(response => {
+            return response.data
+        })
+    }
+};
+
+
+export const profileAPI = {
+    getStatus(userID) {
+        return instance.get(`profile/status/${userID}`).then (response => {
+            return response.data
+        })
+},
+    getProfile(userID){
+        return instance.get(`profile/${userID}`).then(response => {
+            return response.data
+        })
+    }
+}

@@ -2,16 +2,11 @@ import {connect} from "react-redux";
 import React from "react"
 import Users from "./Users";
 import {
-    follow, followUserThunk, getUserAC, isDisabled,
-    isFetchingFalse,
-    isFetchingTrue, onPageChangedThunk,
-    setCurrent,
-    setTotalUsersCount,
-    setUsers, unfollow, unfollowUserThunk
+    followUserThunk, getUserAC,
+   onPageChangedThunk,
+    unfollowUserThunk
 } from "../../../Redux/Reducers/UsersReducer";
-
-import {followUser} from "./../../../api/api";
-import {unfollowUser} from "./../../../api/api"
+import {userAPI} from "./../../../api/api";
 import {withAuthRedirect} from "../../../hoc/withAuthRedirect";
 import {compose} from "redux";
 
@@ -28,7 +23,7 @@ class UsersContainer extends React.Component {
             pages.push(i);
         }
         return (
-             <Users {...this.props}  pages={pages} followUser={followUser} unfollowUser={unfollowUser}  />
+             <Users {...this.props}  pages={pages} followUser={userAPI.followUser} unfollowUser={userAPI.unfollowUser}  />
             )
 
     }

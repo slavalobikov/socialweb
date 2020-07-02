@@ -1,6 +1,6 @@
 import {ADD_NEW_POST_TEXT, UPDATE_NEW_POST_TEXT} from "../ActionTypes";
-import {followUser, getStatus} from "../../api/api";
-import {follow, isDisabled} from "./UsersReducer";
+import {followUser, getStatus, profileAPI} from "../../api/api";
+import {follow, isDisabled, isFetchingFalse, isFetchingTrue} from "./UsersReducer";
 
 const SET_STATUS_USER = "SET_STATUS_USER"
 
@@ -80,12 +80,25 @@ export const setStatusUser = (status) => ({type: SET_STATUS_USER, status});
 
 export const getStatusThunk = (status) => {
     return (dispatch) => {
-        getStatus(status).then(response => {
+        profileAPI.getStatus(status).then(response => {
             dispatch(setStatusUser(response))
 
         })
     }
 };
+
+export const getProfileThunk = (userID) => {
+    return (dispatch) => {
+        dispatch(isFetchingTrue());
+        profileAPI.getProfile(/*this.props.match.params.userID*/ userID).then(response =>{
+            dispatch(setPhotoUser(response.photos.large));
+            dispatch(isFetchingFalse());
+            //
+            dispatch(getStatusThunk(userID))
+        })
+    }
+
+}
 
 /*export const followUserThunk = (id) => {
     return (dispatch) => {

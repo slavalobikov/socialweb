@@ -3,8 +3,8 @@ import React from 'react'
 
 import Main from "./Main";
 import {ADD_NEW_POST_TEXT, UPDATE_NEW_POST_TEXT} from "../../../Redux/ActionTypes";
-import {getProfile} from "../../../api/api";
-import {getStatusThunk, setPhotoUser, setStatusUser} from "../../../Redux/Reducers/ProfileReducer";
+import {getProfile, profileAPI} from "../../../api/api";
+import {getProfileThunk, getStatusThunk, setPhotoUser, setStatusUser} from "../../../Redux/Reducers/ProfileReducer";
 import {withRouter} from "react-router-dom";
 import {isFetchingFalse, isFetchingTrue} from "../../../Redux/Reducers/UsersReducer";
 import {withAuthRedirect} from "../../../hoc/withAuthRedirect";
@@ -13,13 +13,15 @@ import {compose} from "redux";
 
 class MainContainer extends React.Component {
     componentDidMount() {
-        this.props.isFetchingTrue();
-        getProfile(this.props.match.params.userID).then(response =>{
+
+        this.props.getProfileThunk(this.props.match.params.userID)
+/*        this.props.isFetchingTrue();
+        profileAPI.getProfile(this.props.match.params.userID).then(response =>{
             this.props.setPhotoUser(response.photos.large);
             this.props.isFetchingFalse();
             //
             this.props.getStatusThunk(this.props.match.params.userID)
-        })
+        })*/
     }
 
     render() {
@@ -56,6 +58,9 @@ let mapDispatchToProps = (dispatch) => {
         },
         getStatusThunk: (id) => {
             dispatch(getStatusThunk(id))
+        },
+        getProfileThunk: (id) => {
+            dispatch(getProfileThunk(id))
         }
     }
 };

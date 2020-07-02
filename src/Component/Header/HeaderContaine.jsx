@@ -1,8 +1,7 @@
 import React from 'react';
 import Header from "./Header";
 import {connect} from "react-redux";
-import {authmeThunk, isAuthBool, setUserData} from "../../Redux/Reducers/AuthReducer";
-import {authme, getProfile} from "../../api/api";
+import {authmeThunk, setUserData} from "../../Redux/Reducers/AuthReducer";
 import {setPhotoUser} from "../../Redux/Reducers/ProfileReducer";
 
 
@@ -10,17 +9,6 @@ class HeaderContainer extends React.Component {
 
     componentDidMount() {
         this.props.authmeThunk();
-/*
-        authme().then(response => {
-
-                if (response.resultCode === 0) {
-
-                    setUserData(this.props.setUserData(response.data.id, response.data.email, response.data.login))
-
-                }
-        })
-*/
-
     }
 
     render() {

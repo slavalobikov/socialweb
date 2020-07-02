@@ -1,4 +1,4 @@
-import {authme} from "../../api/api";
+import {authAPI, authme} from "../../api/api";
 
 const SET_USER_DATA = 'SET_USER_DATA';
 const IS_AUTH_BOOL = 'IS_AUTH_BOOL';
@@ -28,7 +28,7 @@ export const setUserData = (id, email, login) => ({type:SET_USER_DATA, data:{id,
 
 export const authmeThunk = () => {
     return (dispatch) => {
-        authme().then(response => {
+        authAPI.authme().then(response => {
             if (response.resultCode === 0) {
                 setUserData(dispatch(setUserData(response.data.id, response.data.email, response.data.login)))
             }
