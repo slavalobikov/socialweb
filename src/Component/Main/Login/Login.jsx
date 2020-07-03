@@ -1,11 +1,13 @@
 import React from 'react';
 import s from './Login.module.css'
 import {Field, reduxForm} from "redux-form";
+import {setDataLoginThunk} from "../../../Redux/Reducers/AuthReducer";
 
 
 const Login = (props) => {
 
     const onSubmit = (formData) => {
+        setDataLoginThunk(formData);
         console.log(formData)
     };
 
