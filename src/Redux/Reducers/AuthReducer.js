@@ -26,7 +26,7 @@ const AuthPageReducer = (state = initialState, action) => {
         case SET_DATA_ABOUT_LOGIN:
             return {
                 ...state,
-                ...action.data
+                ...action.payload
             };
 
         default: return state
@@ -34,14 +34,14 @@ const AuthPageReducer = (state = initialState, action) => {
 };
 
 export const setUserData = (id, email, login) => ({type:SET_USER_DATA, data:{id, email, login} });
-const setDataAboutLogin = (email, password, rememberMe) => ({type:SET_DATA_ABOUT_LOGIN, data:{email, password,rememberMe}})
+const setDataAboutLogin = (email, password, rememberMe) => ({type:SET_DATA_ABOUT_LOGIN, payload:{email, password,rememberMe}});
 
-export const setDataLoginThunk = (data) => {
-
+export const setDataLoginThunk = (email, password) => {
     return (dispatch) => {
-        authAPI.login().then(response => {
-            if (response.resultCode === 0) {
-                dispatch(setDataAboutLogin(data))
+        debugger
+        authAPI.login(email, password).then(response => {
+            if (response.data.resultCode === 0) {
+                dispatch(setDataAboutLogin(email, password))
             }
         })
     }

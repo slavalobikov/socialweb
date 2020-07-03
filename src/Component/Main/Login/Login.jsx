@@ -1,14 +1,16 @@
 import React from 'react';
 import s from './Login.module.css'
 import {Field, reduxForm} from "redux-form";
+import {connect} from "react-redux";
 import {setDataLoginThunk} from "../../../Redux/Reducers/AuthReducer";
 
 
 const Login = (props) => {
 
     const onSubmit = (formData) => {
-        setDataLoginThunk(formData);
-        console.log(formData)
+        props.setDataLoginThunk(formData.Login, formData.Password);
+        console.log(formData.Password)
+        //console.log(formData)
     };
 
     return (
@@ -32,4 +34,4 @@ const LoginForm = (props) => {
 
 const  LoginReduxForm  = reduxForm({form: 'login'})(LoginForm);
 
-export default Login;
+export default connect(null,{setDataLoginThunk})(Login);
