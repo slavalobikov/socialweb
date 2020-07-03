@@ -2,18 +2,14 @@ import {connect} from "react-redux";
 import React from 'react'
 
 import Main from "./Main";
-import {ADD_NEW_POST_TEXT, UPDATE_NEW_POST_TEXT} from "../../../Redux/ActionTypes";
-import {getProfile, profileAPI} from "../../../api/api";
+import {ADD_NEW_POST_TEXT,} from "../../../Redux/ActionTypes";
 import {
     getProfileThunk,
-    getStatusThunk,
     setPhotoUser,
-    setStatusUser,
-    updateStatus, updateStatusThunk
+
+   updateStatusThunk
 } from "../../../Redux/Reducers/ProfileReducer";
 import {withRouter} from "react-router-dom";
-import {isFetchingFalse, isFetchingTrue} from "../../../Redux/Reducers/UsersReducer";
-import {withAuthRedirect} from "../../../hoc/withAuthRedirect";
 import {compose} from "redux";
 
 
@@ -41,11 +37,8 @@ let mapStateToProps = (state) => ( {
 
 let mapDispatchToProps = (dispatch) => {
     return {
-        updateNewPostText:(text) => {
-            dispatch(UPDATE_NEW_POST_TEXT(text))
-        },
-        addPost:() => {
-            dispatch(ADD_NEW_POST_TEXT())
+        addPost:(newPostBody) => {
+            dispatch(ADD_NEW_POST_TEXT(newPostBody))
         },
         setPhotoUser:(photo) => {
             dispatch(setPhotoUser(photo))

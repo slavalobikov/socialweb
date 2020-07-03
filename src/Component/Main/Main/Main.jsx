@@ -3,18 +3,16 @@ import s from './Main.module.css'
 import Post from "./Post/Post";
 import Preloader from "../../../common/Preloader";
 import Status from "./Status/Status";
+import {Field, reduxForm} from "redux-form";
+
 
 const Main = (props) => {
 
     let PostElement = props.profilePage.map ( p => <Post img={p.img} text={p.text} key={p.id} name={p.name} />  );
 
-    let onChange = (e) => {
-        let text = e.target.value;
-        props.updateNewPostText(text);
-    };
 
-    let addPost = () => {
-        props.addPost();
+    const addNewPost = (postData) => {
+       props.addPost(postData.newPostBody)
     };
 
 
@@ -26,11 +24,26 @@ const Main = (props) => {
             }
             <Status status={props.status} updateStatus={props.updateStatusThunk} />
 
-            <textarea value={props.newPostText} onChange={onChange}> </textarea>  <button onClick={ addPost } >Отрправить </button>
+
+            <AddPostFormRedux onSubmit={addNewPost} />
             {PostElement}
         </div>
 
     )
 };
+
+const AddPostForm = (props) => {
+    return(
+            <form onSubmit={props.handleSubmit}>
+                <Field component={"textarea"} name={"newPostBody"} placeholder={"Пиши ебать"}  />
+                <button  >Отрправить </button>
+            </form>
+
+        )
+};
+
+const AddPostFormRedux = reduxForm({form:"postAddPostForm"})(AddPostForm);
+
+
 
 export default Main;
