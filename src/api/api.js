@@ -1,6 +1,6 @@
 import * as axios from "axios";
 
-let URL = 'https://social-network.samuraijs.com/api/1.0/';
+//let URL = 'https://social-network.samuraijs.com/api/1.0/';
 
 
 const instance = axios.create({

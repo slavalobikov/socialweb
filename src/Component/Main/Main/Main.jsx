@@ -25,7 +25,6 @@ const Main = (props) => {
             }
             <Status status={props.status} updateStatus={props.updateStatusThunk} />
 
-
             <AddPostFormRedux onSubmit={addNewPost} />
             {PostElement}
         </div>

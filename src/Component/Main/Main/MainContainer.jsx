@@ -15,8 +15,11 @@ import {compose} from "redux";
 
 class MainContainer extends React.Component {
     componentDidMount() {
-
-        this.props.getProfileThunk(this.props.match.params.userID)
+        let userID = this.props.match.params.userID;
+            if (!userID) {
+                userID = this.props.id
+            }
+        this.props.getProfileThunk(userID)
 
     }
 
@@ -32,7 +35,8 @@ let mapStateToProps = (state) => ( {
     newPostText:state.ProfilePageReducer.newPostText,
     photo: state.ProfilePageReducer.photo,
     isFetching: state.UsersPageReducer.isFetching,
-    status:state.ProfilePageReducer.status
+    status:state.ProfilePageReducer.status,
+    id:state.AuthPageReducer.id
 });
 
 let mapDispatchToProps = (dispatch) => {

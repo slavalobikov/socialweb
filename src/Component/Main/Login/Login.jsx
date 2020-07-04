@@ -6,6 +6,7 @@ import AuthPageReducer, {setDataLoginThunk} from "../../../Redux/Reducers/AuthRe
 import {Input} from "../../../common/FormConrols/FormsControls";
 import {required} from "../../../utils/validators/validators";
 import {Redirect} from "react-router-dom";
+import style from "./../../../common/FormConrols/FormsControls.module.css"
 
 
 const Login = (props) => {
@@ -36,6 +37,9 @@ const LoginForm = (props) => {
             <div><Field placeholder='password' name={"Password"} type={"password"} component={Input}
                         validate={[required]} />  </div>
             <div><Field type='checkbox' name={"Remember me"} component={"c"} /> Запомнить меня  </div>
+            { props.error && <div className={style.formSummaryError}>
+                {props.error}
+            </div>}
             <div><button> Войти в акаунт </button></div>
         </form>
     )
