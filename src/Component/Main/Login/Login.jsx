@@ -2,9 +2,10 @@ import React from 'react';
 import s from './Login.module.css'
 import {Field, reduxForm} from "redux-form";
 import {connect} from "react-redux";
-import {setDataLoginThunk} from "../../../Redux/Reducers/AuthReducer";
+import AuthPageReducer, {setDataLoginThunk} from "../../../Redux/Reducers/AuthReducer";
 import {Input} from "../../../common/FormConrols/FormsControls";
 import {required} from "../../../utils/validators/validators";
+import {Redirect} from "react-router-dom";
 
 
 const Login = (props) => {
@@ -14,6 +15,10 @@ const Login = (props) => {
         console.log(formData.Password)
         //console.log(formData)
     };
+
+    if (props.isAuth) {
+        return <Redirect to="/profile" />
+    }
 
     return (
         <div className={s.login}>
@@ -36,6 +41,13 @@ const LoginForm = (props) => {
     )
 };
 
+
+
 const  LoginReduxForm  = reduxForm({form: 'login'})(LoginForm);
 
-export default connect(null,{setDataLoginThunk})(Login);
+
+const mapStateToProps = (state) => ({
+    isAuth:state.AuthPageReducer.isAuth
+})
+
+export default connect(mapStateToProps,{setDataLoginThunk})(Login);

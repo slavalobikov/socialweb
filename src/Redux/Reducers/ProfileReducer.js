@@ -1,5 +1,5 @@
 import {ADD_NEW_POST_TEXT, UPDATE_NEW_POST_TEXT} from "../ActionTypes";
-import {followUser, getStatus, profileAPI} from "../../api/api";
+import {authAPI, followUser, getStatus, profileAPI} from "../../api/api";
 import {follow, isDisabled, isFetchingFalse, isFetchingTrue} from "./UsersReducer";
 
 const SET_STATUS_USER = "SET_STATUS_USER"
@@ -100,5 +100,6 @@ export const updateStatusThunk = (status) => {
         })
     }
 };
+
 
 export default ProfilePageReducer;

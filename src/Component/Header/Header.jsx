@@ -2,8 +2,13 @@ import React from 'react';
 import s from './Header.module.css'
 import {NavLink} from "react-router-dom";
 
-const Header = (props) => {
 
+
+const Header = (props) => {
+    const logout = () => {
+        props.logout();
+        console.log(props.isAuth)
+    };
     return (
         <header className={s.header}>
 
@@ -14,7 +19,7 @@ const Header = (props) => {
            {props.isAuth
                ? <div className={s.auth}>{props.login} <img src={!props.photo
                    ? 'https://avatars.yandex.net/get-music-content/175191/f26e7e1a.p.5821649/m1000x1000'
-                   : props.photo} alt=""/></div>
+                   : props.photo} alt=""/> <a href={"/login"} className={s.logout} onClick={logout}>Выйти</a> </div>
                : <div className={s.auth}>Войдите</div> }
 
         </header>
