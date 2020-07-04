@@ -4,12 +4,14 @@ import ProfilePageReducer from "./Reducers/ProfileReducer";
 import UsersPageReducer from "./Reducers/UsersReducer";
 import AuthPageReducer from "./Reducers/AuthReducer";
 import { reducer as formReducer  } from  "redux-form"
+import AppReducer from "./Reducers/AppReducer";
 
 let reducers = combineReducers({
     ProfilePageReducer,
     UsersPageReducer,
     AuthPageReducer,
     form:formReducer,
+    AppReducer,
 });
 
 

@@ -53,7 +53,7 @@ export const setDataLoginThunk = (email, password) => {
 
 export const authmeThunk = () => {
     return (dispatch) => {
-        authAPI.authme().then(response => {
+       return  authAPI.authme().then(response => {
             if (response.resultCode === 0) {
                 //setUserData(dispatch(setUserData(response.data.id, response.data.email, response.data.login , true)))
                 dispatch(setUserData(response.data.id, response.data.email, response.data.login , true))

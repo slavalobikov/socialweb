@@ -7,9 +7,7 @@ import {setPhotoUser} from "../../Redux/Reducers/ProfileReducer";
 
 class HeaderContainer extends React.Component {
 
-    componentDidMount() {
-        this.props.authmeThunk();
-    }
+
 
     render() {
         return (
@@ -29,7 +27,7 @@ let mapStateToProps = (state) => {
 export default connect(mapStateToProps, {
     setUserData,
     setPhotoUser,
-    authmeThunk,
+    //authmeThunk,
     logout,
 
 })(HeaderContainer);
