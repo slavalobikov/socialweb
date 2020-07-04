@@ -3,6 +3,8 @@ import s from './Login.module.css'
 import {Field, reduxForm} from "redux-form";
 import {connect} from "react-redux";
 import {setDataLoginThunk} from "../../../Redux/Reducers/AuthReducer";
+import {Input} from "../../../common/FormConrols/FormsControls";
+import {required} from "../../../utils/validators/validators";
 
 
 const Login = (props) => {
@@ -24,8 +26,10 @@ const Login = (props) => {
 const LoginForm = (props) => {
     return (
         <form onSubmit={props.handleSubmit}>
-            <div><Field placeholder='login' name={"Login"} component={"input"} />  </div>
-            <div><Field placeholder='password' name={"Password"} component={"input"} />  </div>
+            <div><Field placeholder='login' name={"Login"} component={Input}
+                        validate={[required]}/>  </div>
+            <div><Field placeholder='password' name={"Password"} type={"password"} component={Input}
+                        validate={[required]} />  </div>
             <div><Field type='checkbox' name={"Remember me"} component={"c"} /> Запомнить меня  </div>
             <div><button> Войти в акаунт </button></div>
         </form>

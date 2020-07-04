@@ -4,6 +4,7 @@ import Post from "./Post/Post";
 import Preloader from "../../../common/Preloader";
 import Status from "./Status/Status";
 import {Field, reduxForm} from "redux-form";
+import {maxLengthCreator, required} from "../../../utils/validators/validators";
 
 
 const Main = (props) => {
@@ -32,10 +33,16 @@ const Main = (props) => {
     )
 };
 
+const maxLength = maxLengthCreator(300);
+
 const AddPostForm = (props) => {
+
+
+
     return(
             <form onSubmit={props.handleSubmit}>
-                <Field component={"textarea"} name={"newPostBody"} placeholder={"Пиши ебать"}  />
+                <Field component={"textarea"} name={"newPostBody"} placeholder={"Написать пост"}
+                       validate={[required, maxLength]} />
                 <button  >Отрправить </button>
             </form>
 
