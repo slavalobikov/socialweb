@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77a2ed3f-7841-4e91-b137-6b75868cf242" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Redux/Reducers/AppReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/Reducers/usersSelectors.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Header/HeaderContaine.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Header/HeaderContaine.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Reducers/AuthReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Reducers/AuthReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/ReduxStore.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/ReduxStore.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Main/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Users/UsersContainer.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +37,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Redux/Reducers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Shop" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -114,7 +111,7 @@
       <workItem from="1593431764148" duration="27285000" />
       <workItem from="1593540707583" duration="27063000" />
       <workItem from="1593694894077" duration="3713000" />
-      <workItem from="1593718987773" duration="49265000" />
+      <workItem from="1593718987773" duration="51094000" />
     </task>
     <task id="LOCAL-00001" summary="update post text">
       <created>1592854599365</created>
@@ -291,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593886996873</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="initialized">
+      <created>1593897742237</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1593897742237</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,25 +325,26 @@
     <MESSAGE value="validation" />
     <MESSAGE value="login/unlogin" />
     <MESSAGE value="validation without logout" />
-    <option name="LAST_COMMIT_MESSAGE" value="validation without logout" />
+    <MESSAGE value="initialized" />
+    <option name="LAST_COMMIT_MESSAGE" value="initialized" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="26" key="#Deployment" timestamp="1592854175292">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="26" key="#Deployment/0.0.1366.728@0.0.1366.728" timestamp="1592854175292" />
-    <state x="454" y="175" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592842342770">
+    <state x="454" y="175" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593945595703">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="454" y="175" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1592842342770" />
-    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1593886994071">
+    <state x="454" y="175" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1593945595703" />
+    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1593897735941">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1593886994071" />
-    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1592842477317">
+    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1593897735941" />
+    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1593945360653">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1592842477317" />
+    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1593945360653" />
     <state x="563" y="263" width="261" height="201" key="Github.ShareDialog" timestamp="1592854438965">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -360,18 +365,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1345" height="392" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1593692250407" />
-    <state x="275" y="89" key="Vcs.Push.Dialog.v2" timestamp="1593894164303">
+    <state x="275" y="89" key="Vcs.Push.Dialog.v2" timestamp="1593897747476">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="89" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1593894164303" />
+    <state x="275" y="89" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1593897747476" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1593696297125">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1593696297125" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1593874981323">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1593945556438">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1593874981323" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1593945556438" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

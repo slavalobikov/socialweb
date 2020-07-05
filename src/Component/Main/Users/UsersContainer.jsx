@@ -9,6 +9,13 @@ import {
 import {userAPI} from "./../../../api/api";
 import {withAuthRedirect} from "../../../hoc/withAuthRedirect";
 import {compose} from "redux";
+import {
+    getCurrentPage, getDisabled,
+    getIsFetching,
+    getPageSize,
+    getTotalUsersCount,
+    getUsers
+} from "../../../Redux/Reducers/usersSelectors";
 
 
 class UsersContainer extends React.Component {
@@ -30,7 +37,7 @@ class UsersContainer extends React.Component {
 }
 
 
-let mapStateToProps = (state) => {
+/*let mapStateToProps = (state) => {
     return {
         users: state.UsersPageReducer.users,
         pageSize: state.UsersPageReducer.pageSize,
@@ -40,7 +47,20 @@ let mapStateToProps = (state) => {
         Disabled:state.UsersPageReducer.isDisabled,
 
     }
+};*/
+
+let mapStateToProps = (state) => {
+    return {
+        users: getUsers(state),
+        pageSize: getPageSize(state),
+        totalUsers: getTotalUsersCount(state),
+        currentPage:getCurrentPage(state),
+        isFetching: getIsFetching(state),
+        Disabled:getDisabled(state),
+
+    }
 };
+
 
 export default compose(
     connect(mapStateToProps, {
