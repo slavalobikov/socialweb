@@ -3,6 +3,8 @@ import s from './Users.module.css'
 
 import Preloader from "../../../common/Preloader";
 import {NavLink} from "react-router-dom";
+import User from "./User";
+import Paginator from "../../../common/Paginator/Paginator";
 
 const Users = (props) => {
 
@@ -12,19 +14,20 @@ const Users = (props) => {
     let unfUser = (id) => {
     props.unfollowUserThunk(id)
     };
-    let onPageChanged = (pageNumber) => {
+   let onPageChanged = (pageNumber) => {
         props.onPageChangedThunk(pageNumber, props.pageSize)
     };
-
-    let pages = props.pages.map ( p => <div onClick={ (e) => onPageChanged(p) } className={ props.currentPage === p && s.selectedPage  } >{p}</div>  );
 
     return (
         <div className={s.content}>
 
             { props.isFetching ? <Preloader/>
             : <div>
+                    <Paginator currentPage={props.currentPage} onPageChanged={onPageChanged}
+                               totalItemsCount={props.totalItemsCount} pageSize={props.pageSize}/>
                     {props.users.map(u =>
-                        <div>
+                        <User u={u} Disabled={props.Disabled} unfUser={unfUser} fUser={fUser} key={u.id} />
+                       /* <div>
                             <NavLink to={"/profile/" + u.id}>
                             {u.name}
                             <div><img
@@ -36,13 +39,13 @@ const Users = (props) => {
                                     onClick={() => unfUser(u.id) }> Отписаться </button>
                                 : <button disabled={props.Disabled.some(id => id === u.id)}
                                     onClick={ () => fUser(u.id) }> Подписаться </button>}
-                        </div>
+                        </div>*/
                     )
                     }
                 </div>}
-        <div>
+{/*        <div>
             {pages}
-        </div>
+        </div>*/}
         </div>
 
     )

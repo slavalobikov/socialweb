@@ -2,7 +2,6 @@ import {authAPI, authme} from "../../api/api";
 import {stopSubmit} from "redux-form"
 
 const SET_USER_DATA = 'SET_USER_DATA';
-const LOGOUT = 'LOGOUT';
 
 let initialState = {
     id:null,
@@ -11,7 +10,6 @@ let initialState = {
     isAuth:false,
     password:null,
     rememberMe:null,
-
 };
 
 const AuthPageReducer = (state = initialState, action) => {
@@ -21,11 +19,6 @@ const AuthPageReducer = (state = initialState, action) => {
                 ...state,
                 ...action.payload,
             };
-        case LOGOUT:
-            return {
-               ...state,
-                isAuth:action.bool
-            };
         default: return state
     }
 
@@ -33,7 +26,6 @@ const AuthPageReducer = (state = initialState, action) => {
 };
 
 export const setUserData = (id, email, login, isAuth) => ({type:SET_USER_DATA, payload:{id, email, login, isAuth} });
-export const logoutP = (bool) => ({type:LOGOUT, bool});
 
 export const setDataLoginThunk = (email, password) => async (dispatch) => {
         let response = await authAPI.login(email, password, )
@@ -56,7 +48,7 @@ export const authmeThunk = () => async (dispatch) => {
 export const logout = (bool) => async (dispatch) => {
         let response = await authAPI.logout();
             if (response.resultCode === 0) {
-                dispatch(logoutP(bool));
+                dispatch(setUserData(null, null, null, false))
             }
 };
 

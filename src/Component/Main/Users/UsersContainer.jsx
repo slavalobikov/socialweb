@@ -30,7 +30,8 @@ class UsersContainer extends React.Component {
             pages.push(i);
         }
         return (
-             <Users {...this.props}  pages={pages} followUser={userAPI.followUser} unfollowUser={userAPI.unfollowUser}  />
+             <Users {...this.props}  pages={pages} followUser={userAPI.followUser} unfollowUser={userAPI.unfollowUser}
+                    currentPage={this.props.currentPage} totalItemsCount={this.props.totalUsers} pageSize={this.props.pageSize}/>
             )
 
     }

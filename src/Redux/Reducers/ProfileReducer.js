@@ -1,6 +1,6 @@
 import {ADD_NEW_POST_TEXT} from "../ActionTypes";
 import {  profileAPI} from "../../api/api";
-import {isFetchingFalse, isFetchingTrue} from "./UsersReducer";
+import {isFetching, isFetchingFalse, isFetchingTrue} from "./UsersReducer";
 
 const SET_STATUS_USER = "SET_STATUS_USER";
 
@@ -76,11 +76,13 @@ export const getStatusThunk = (status) => async (dispatch) => {
 };
 
 export const getProfileThunk = (userID) => async (dispatch) => {
-        dispatch(isFetchingTrue());
-        let response = await profileAPI.getProfile(userID);
+            //dispatch(isFetchingTrue());
+            dispatch(isFetching(true));
+            let response = await profileAPI.getProfile(userID);
             dispatch(setPhotoUser(response.photos.large));
-            dispatch(isFetchingFalse());
-            dispatch(getStatusThunk(userID))
+            dispatch(getStatusThunk(userID));
+            //dispatch(isFetchingFalse());
+            dispatch(isFetching(false))
 };
 
 export const updateStatusThunk = (status) => async (dispatch) => {
