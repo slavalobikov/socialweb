@@ -135,40 +135,28 @@ export const getUserAC = (currentPage, pageSize) => {
 
 };
 
-export const followUserThunk = (id) => {
-    return (dispatch) => {
+export const followUserThunk = (id) => async (dispatch) => {
         dispatch(isDisabled(true, id))
-        userAPI.followUser(id).then(response => {
+        let response = await userAPI.followUser(id);
             if (response == 0) {
                 dispatch(follow(id))
             }
             dispatch(isDisabled(false, id))
-        })
-    }
 };
-export const unfollowUserThunk = (id)=> {
-    return (dispatch) => {
+export const unfollowUserThunk = (id)=> async (dispatch) => {
         dispatch(isDisabled(true, id));
-        userAPI.unfollowUser(id).then(response => {
+        let response = await userAPI.unfollowUser(id)
                 if (response == 0) {
                     dispatch(unfollow(id))
                 }
                 dispatch(isDisabled(false, id))
-            }
-        );
-    }
 };
-export const onPageChangedThunk = (pageNumber, pageSize) => {
-    return (dispatch) => {
+export const onPageChangedThunk = (pageNumber, pageSize) => async (dispatch) => {
         dispatch(isFetchingTrue());
         dispatch(setCurrent(pageNumber));
-        userAPI.getUsers(pageNumber, pageSize )
-            .then(response => {
+        let response = await userAPI.getUsers(pageNumber, pageSize );
                 dispatch(setUsers(response.items));
                 dispatch(isFetchingFalse());
-            });
-
-    }
 }
 
 export default UsersPageReducer;

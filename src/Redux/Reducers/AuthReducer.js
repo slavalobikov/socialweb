@@ -2,9 +2,7 @@ import {authAPI, authme} from "../../api/api";
 import {stopSubmit} from "redux-form"
 
 const SET_USER_DATA = 'SET_USER_DATA';
-const IS_AUTH_BOOL = 'IS_AUTH_BOOL';
-const SET_DATA_ABOUT_LOGIN = 'SET_DATA_ABOUT_LOGIN';
-const LOGOUT = 'LOGOUT'
+const LOGOUT = 'LOGOUT';
 
 let initialState = {
     id:null,
@@ -37,42 +35,29 @@ const AuthPageReducer = (state = initialState, action) => {
 export const setUserData = (id, email, login, isAuth) => ({type:SET_USER_DATA, payload:{id, email, login, isAuth} });
 export const logoutP = (bool) => ({type:LOGOUT, bool});
 
-export const setDataLoginThunk = (email, password) => {
-    return (dispatch) => {
-        authAPI.login(email, password, ).then(response => {
+export const setDataLoginThunk = (email, password) => async (dispatch) => {
+        let response = await authAPI.login(email, password, )
             if (response.data.resultCode === 0) {
                 dispatch(authmeThunk())
             } else {
                 let message = response.data.messages.length > 0 ? response.data.messages[0] : "Ошибка"
                 dispatch(stopSubmit("login", {_error:message }))
-
             }
-        })
-    }
-};
+    };
 
-export const authmeThunk = () => {
-    return (dispatch) => {
-       return  authAPI.authme().then(response => {
+
+export const authmeThunk = () => async (dispatch) => {
+        let response = await  authAPI.authme();
             if (response.resultCode === 0) {
-                //setUserData(dispatch(setUserData(response.data.id, response.data.email, response.data.login , true)))
                 dispatch(setUserData(response.data.id, response.data.email, response.data.login , true))
             }
-        })
-
-    }
 };
 
-export const logout = (bool) => {
-    return (dispatch) => {
-        authAPI.logout().then(response => {
+export const logout = (bool) => async (dispatch) => {
+        let response = await authAPI.logout();
             if (response.resultCode === 0) {
-               // dispatch(setUserData(null, null, null, false))
-               //dispatch(logoutP())
                 dispatch(logoutP(bool));
             }
-        })
-    }
 };
 
 

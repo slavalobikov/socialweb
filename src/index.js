@@ -9,7 +9,7 @@ import store from "./Redux/ReduxStore"
 
 
 
- let rerenderEntireTree = (state) => {
+ //let rerenderEntireTree = (state) => {
      ReactDOM.render(
 
          <React.StrictMode>
@@ -21,9 +21,9 @@ import store from "./Redux/ReduxStore"
          </React.StrictMode>,
          document.getElementById('root')
      );
- };
+ //};
 
-rerenderEntireTree(store.getState());
+//rerenderEntireTree(store.getState());
 
 
 

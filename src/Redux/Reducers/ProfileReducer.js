@@ -1,8 +1,8 @@
-import {ADD_NEW_POST_TEXT, UPDATE_NEW_POST_TEXT} from "../ActionTypes";
-import {authAPI, followUser, getStatus, profileAPI} from "../../api/api";
-import {follow, isDisabled, isFetchingFalse, isFetchingTrue} from "./UsersReducer";
+import {ADD_NEW_POST_TEXT} from "../ActionTypes";
+import {  profileAPI} from "../../api/api";
+import {isFetchingFalse, isFetchingTrue} from "./UsersReducer";
 
-const SET_STATUS_USER = "SET_STATUS_USER"
+const SET_STATUS_USER = "SET_STATUS_USER";
 
 const SET_PHOTO_USER = 'SET_PHOTO_USER';
 let initialState = {
@@ -70,35 +70,24 @@ const ProfilePageReducer = (state = initialState, action ) => {
 export const setPhotoUser = (photo) => ({type: SET_PHOTO_USER, photo});
 export const setStatusUser = (status) => ({type: SET_STATUS_USER, status});
 
-export const getStatusThunk = (status) => {
-    return (dispatch) => {
-        profileAPI.getStatus(status).then(response => {
+export const getStatusThunk = (status) => async (dispatch) => {
+        let response = await profileAPI.getStatus(status);
             dispatch(setStatusUser(response))
-
-        })
-    }
 };
 
-export const getProfileThunk = (userID) => {
-    return (dispatch) => {
+export const getProfileThunk = (userID) => async (dispatch) => {
         dispatch(isFetchingTrue());
-        profileAPI.getProfile(userID).then(response =>{
+        let response = await profileAPI.getProfile(userID);
             dispatch(setPhotoUser(response.photos.large));
             dispatch(isFetchingFalse());
             dispatch(getStatusThunk(userID))
-        })
-    }
-
 };
 
-export const updateStatusThunk = (status) => {
-    return (dispatch) => {
-        profileAPI.updateStatus(status).then(response => {
+export const updateStatusThunk = (status) => async (dispatch) => {
+        let response = await profileAPI.updateStatus(status);
             if (response.data.resultCode === 0) {
                 dispatch(setStatusUser(status))
             }
-        })
-    }
 };
 
 
