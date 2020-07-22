@@ -14,13 +14,25 @@ import {compose} from "redux";
 
 
 class MainContainer extends React.Component {
-    componentDidMount() {
-        let userID = this.props.match.params.userID;
-            if (!userID) {
-                userID = this.props.id
-            }
-        this.props.getProfileThunk(userID)
 
+
+    refreshProfile() {
+        let userID = this.props.match.params.userID;
+        if (!userID) {
+            userID = this.props.id;
+        }
+
+        this.props.getProfileThunk(userID)
+    }
+
+    componentDidMount() {
+        this.refreshProfile();
+    }
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        debugger
+        if (this.props.match.params.userID != prevProps.match.params.userID ) {
+            this.refreshProfile();
+        }
     }
 
     render() {

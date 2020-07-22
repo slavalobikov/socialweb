@@ -2,7 +2,10 @@ import React, {useEffect, useState} from "react";
 
 const StatusHook = (props) => {
 
-    console.log('props', props)
+    let userID = props.userID;
+    if (!userID) {
+        userID = props.id;
+    }
 
     let [editMode, setEditMode] = useState(false);
     let [status, setStatus] = useState(props.status);
@@ -30,12 +33,11 @@ const StatusHook = (props) => {
     const onStatusChange = (e) => {
         setStatus(e.currentTarget.value);
     };
-    console.log(props.id === props.userID)
     return (
         <div>
 
             {editMode
-                ? props.id == props.userID
+                ? (props.id == userID)
                     ? <div> <input onChange={onStatusChange} onBlur={deactivateEditeMode}
                                 autoFocus={true} value={status} /></div>
                     : <div onClick={activateEditeMode }>Status:{props.status || <span>3% </span>}</div>

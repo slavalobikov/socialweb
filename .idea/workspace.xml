@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="77a2ed3f-7841-4e91-b137-6b75868cf242" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Main/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Main/Main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Header/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Main/Main/MainContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Main/MainContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Main/Status/Status.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Main/Status/Status.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Main/Main/Status/StatusWithHook.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Main/Status/StatusWithHook.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Reducers/AuthReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Reducers/AuthReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Reducers/UsersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Reducers/UsersReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Paginator/Paginator.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Paginator/Paginator.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +38,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../web/react-way-of-samurai" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -136,7 +132,7 @@
       <workItem from="1594567023573" duration="2564000" />
       <workItem from="1595093951855" duration="722000" />
       <workItem from="1595437663272" duration="240000" />
-      <workItem from="1595437977440" duration="4577000" />
+      <workItem from="1595437977440" duration="9753000" />
     </task>
     <task id="LOCAL-00001" summary="update post text">
       <created>1592854599365</created>
@@ -348,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594144872589</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="status">
+      <created>1595444233540</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1595444233540</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -365,7 +368,6 @@
     <MESSAGE value="auth redirect and Hight order components" />
     <MESSAGE value="compose" />
     <MESSAGE value="get User STatus" />
-    <MESSAGE value="status" />
     <MESSAGE value="API object" />
     <MESSAGE value="Update Status" />
     <MESSAGE value="Form with ReduxForm" />
@@ -380,7 +382,8 @@
     <MESSAGE value="status with hook" />
     <MESSAGE value="async await" />
     <MESSAGE value="paginator" />
-    <option name="LAST_COMMIT_MESSAGE" value="paginator" />
+    <MESSAGE value="status" />
+    <option name="LAST_COMMIT_MESSAGE" value="status" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="26" key="#Deployment" timestamp="1592854175292">
@@ -391,14 +394,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="454" y="175" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1593945595703" />
-    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1594144861692">
+    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1595444228367">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1594144861692" />
-    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1594572320988">
+    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1595444228367" />
+    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1595450665376">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1594572320988" />
+    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595450665376" />
     <state x="563" y="263" width="261" height="201" key="Github.ShareDialog" timestamp="1592854438965">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -419,10 +422,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1345" height="392" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595437905530" />
-    <state x="275" y="89" key="Vcs.Push.Dialog.v2" timestamp="1594144882511">
+    <state x="275" y="89" key="Vcs.Push.Dialog.v2" timestamp="1595444258546">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="89" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1594144882511" />
+    <state x="275" y="89" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1595444258546" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1593696297125">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
