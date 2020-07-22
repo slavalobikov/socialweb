@@ -16,7 +16,6 @@ let Paginator = ({totalItemsCount, pageSize, currentPage, onPageChanged, portion
     let rightPortionPageNumber = portionNumber * portionSize;
 
 
-debugger
      return <div className={s.paginator}>
         <button disabled={portionNumber <= 1} onClick={() => { setPortionNumber(portionNumber - 1) }}>Предыдущие</button>
 

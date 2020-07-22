@@ -127,7 +127,7 @@ const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
 const IS_FETCHING_TRUE = 'IS_FETCHING_TRUE';
 const IS_FETCHING_FALSE = 'IS_FETCHING_FALSE';
 const IS_DISABLED = 'IS_DISABLED';
-const IS_FETCHING = 'IS_FETCHING'
+const IS_FETCHING = 'IS_FETCHING';
 
 export const getUserAC = (currentPage, pageSize) => {
     return async (dispatch) => {

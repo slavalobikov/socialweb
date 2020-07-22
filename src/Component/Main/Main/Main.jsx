@@ -2,7 +2,6 @@ import React from 'react';
 import s from './Main.module.css'
 import Post from "./Post/Post";
 import Preloader from "../../../common/Preloader";
-import Status from "./Status/Status";
 import {Field, reduxForm} from "redux-form";
 import {maxLengthCreator, required} from "../../../utils/validators/validators";
 import StatusHook from "./Status/StatusWithHook";
@@ -24,7 +23,7 @@ const Main = (props) => {
             : <img src={!props.photo ? 'https://img8.eadaily.com/r650x450/o/7ac/95f49146b4501082acd22918d4cc2.jpg' : props.photo}
                    alt=""/>
             }
-            <StatusHook status={props.status} updateStatus={props.updateStatusThunk} />
+            <StatusHook status={props.status} updateStatus={props.updateStatusThunk} id={props.id} userID={props.match.params.userID} />
 
             <AddPostFormRedux onSubmit={addNewPost} />
             {PostElement}

@@ -29,7 +29,6 @@ class MainContainer extends React.Component {
 }
 
 
-
 let mapStateToProps = (state) => ( {
     profilePage:state.ProfilePageReducer.profilePage,
     newPostText:state.ProfilePageReducer.newPostText,

@@ -28,7 +28,7 @@ const AuthPageReducer = (state = initialState, action) => {
 export const setUserData = (id, email, login, isAuth) => ({type:SET_USER_DATA, payload:{id, email, login, isAuth} });
 
 export const setDataLoginThunk = (email, password) => async (dispatch) => {
-        let response = await authAPI.login(email, password, )
+        let response = await authAPI.login(email, password, );
             if (response.data.resultCode === 0) {
                 dispatch(authmeThunk())
             } else {
