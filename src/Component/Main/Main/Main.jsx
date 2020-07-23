@@ -16,6 +16,12 @@ const Main = (props) => {
        props.addPost(postData.newPostBody)
     };
 
+    const onMainPhotoSelected = (e) => {
+        if (e.target.files.length) {
+            props.savePhoto(e.target.files[0])
+        }
+    };
+
 
     return (
         <div className={s.content}>
@@ -23,7 +29,9 @@ const Main = (props) => {
             : <img src={!props.photo ? 'https://img8.eadaily.com/r650x450/o/7ac/95f49146b4501082acd22918d4cc2.jpg' : props.photo}
                    alt=""/>
             }
+            {props.isOwner && <input type="file" onChange={onMainPhotoSelected}/>}
             <StatusHook status={props.status} updateStatus={props.updateStatusThunk} id={props.id} userID={props.match.params.userID} />
+            <div>{props.lookingForAJob ? <div>Ищу работу</div> : <div>Не ищу работу</div>}</div>
 
             <AddPostFormRedux onSubmit={addNewPost} />
             {PostElement}

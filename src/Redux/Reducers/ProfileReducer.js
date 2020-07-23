@@ -3,8 +3,9 @@ import {  profileAPI} from "../../api/api";
 import {isFetching, isFetchingFalse, isFetchingTrue} from "./UsersReducer";
 
 const SET_STATUS_USER = "SET_STATUS_USER";
-
+const SET_USER_PROFILE = 'SET_USER_PROFILE';
 const SET_PHOTO_USER = 'SET_PHOTO_USER';
+const SAVE_PHOTO_SUCCESS = 'SAVE_PHOTO_SUCCESS';
 let initialState = {
 
     profilePage:[
@@ -29,8 +30,9 @@ let initialState = {
     ],
     photo:'',
     status:"",
-};
+    profile: null,
 
+};
 const ProfilePageReducer = (state = initialState, action ) => {
     switch (action.type) {
         case ADD_NEW_POST_TEXT: {
@@ -60,6 +62,13 @@ const ProfilePageReducer = (state = initialState, action ) => {
                 status:action.status
             }
         }
+        case SAVE_PHOTO_SUCCESS:
+            return {...state, photo: action.photos}
+        case SET_USER_PROFILE: {
+            return {...state, profile: action.profile}
+        }
+
+
         default: return state;
     }
 
@@ -69,19 +78,21 @@ const ProfilePageReducer = (state = initialState, action ) => {
 
 export const setPhotoUser = (photo) => ({type: SET_PHOTO_USER, photo});
 export const setStatusUser = (status) => ({type: SET_STATUS_USER, status});
+export const savePhotoSuccess = (photos) => ({type:SAVE_PHOTO_SUCCESS, photos});
 
-export const getStatusThunk = (status) => async (dispatch) => {
-        let response = await profileAPI.getStatus(status);
+export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile})
+
+export const getStatusThunk = (id) => async (dispatch) => {
+        let response = await profileAPI.getStatus(id);
             dispatch(setStatusUser(response))
 };
 
 export const getProfileThunk = (userID) => async (dispatch) => {
-            //dispatch(isFetchingTrue());
             dispatch(isFetching(true));
             let response = await profileAPI.getProfile(userID);
             dispatch(setPhotoUser(response.photos.large));
+            dispatch(setUserProfile(response))
             dispatch(getStatusThunk(userID));
-            //dispatch(isFetchingFalse());
             dispatch(isFetching(false))
 };
 
@@ -89,6 +100,12 @@ export const updateStatusThunk = (status) => async (dispatch) => {
         let response = await profileAPI.updateStatus(status);
             if (response.data.resultCode === 0) {
                 dispatch(setStatusUser(status))
+            }
+};
+export const savePhoto = (file) => async (dispatch) => {
+        let response = await profileAPI.savePhoto(file);
+            if (response.data.resultCode === 0) {
+                dispatch(savePhotoSuccess(response.data.data.photos))
             }
 };
 

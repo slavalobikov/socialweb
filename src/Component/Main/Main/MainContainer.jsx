@@ -4,10 +4,10 @@ import React from 'react'
 import Main from "./Main";
 import {ADD_NEW_POST_TEXT,} from "../../../Redux/ActionTypes";
 import {
-    getProfileThunk,
+    getProfileThunk, savePhoto, setDataProfile,
     setPhotoUser,
 
-   updateStatusThunk
+    updateStatusThunk
 } from "../../../Redux/Reducers/ProfileReducer";
 import {withRouter} from "react-router-dom";
 import {compose} from "redux";
@@ -22,21 +22,20 @@ class MainContainer extends React.Component {
             userID = this.props.id;
         }
 
-        this.props.getProfileThunk(userID)
+        this.props.getProfileThunk(userID);
     }
 
     componentDidMount() {
         this.refreshProfile();
     }
     componentDidUpdate(prevProps, prevState, snapshot) {
-        debugger
         if (this.props.match.params.userID != prevProps.match.params.userID ) {
             this.refreshProfile();
         }
     }
 
     render() {
-        return <Main {...this.props} />
+        return <Main {...this.props} isOwner={!this.props.match.params.userID} />
     }
 }
 
@@ -47,7 +46,8 @@ let mapStateToProps = (state) => ( {
     photo: state.ProfilePageReducer.photo,
     isFetching: state.UsersPageReducer.isFetching,
     status:state.ProfilePageReducer.status,
-    id:state.AuthPageReducer.id
+    id:state.AuthPageReducer.id,
+    profile: state.ProfilePageReducer.profile,
 });
 
 let mapDispatchToProps = (dispatch) => {
@@ -63,7 +63,11 @@ let mapDispatchToProps = (dispatch) => {
         },
         updateStatusThunk: (status) => {
             dispatch(updateStatusThunk(status))
-        }
+        },
+        savePhoto: (photos) => {
+            dispatch(savePhoto(photos))
+        },
+
     }
 };
 

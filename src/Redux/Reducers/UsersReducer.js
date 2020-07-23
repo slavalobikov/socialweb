@@ -8,6 +8,7 @@ let initialState = {
     currentPage: 1,
     isFetching: true,
     isDisabled: [],
+    status:''
 };
 
 

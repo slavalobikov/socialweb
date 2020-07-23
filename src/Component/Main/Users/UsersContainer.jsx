@@ -16,6 +16,7 @@ import {
     getTotalUsersCount,
     getUsers
 } from "../../../Redux/Reducers/usersSelectors";
+import {getStatusThunk} from "../../../Redux/Reducers/ProfileReducer";
 
 
 class UsersContainer extends React.Component {
@@ -58,7 +59,6 @@ let mapStateToProps = (state) => {
         currentPage:getCurrentPage(state),
         isFetching: getIsFetching(state),
         Disabled:getDisabled(state),
-
     }
 };
 
@@ -69,6 +69,7 @@ export default compose(
         followUserThunk,
         unfollowUserThunk,
         onPageChangedThunk,
+            getStatusThunk,
     }
     ),
     withAuthRedirect,

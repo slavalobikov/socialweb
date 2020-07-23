@@ -2,7 +2,6 @@ import React from 'react';
 import s from './Users.module.css'
 
 import Preloader from "../../../common/Preloader";
-import {NavLink} from "react-router-dom";
 import User from "./User";
 import Paginator from "../../../common/Paginator/Paginator";
 
@@ -26,7 +25,7 @@ const Users = (props) => {
                     <Paginator currentPage={props.currentPage} onPageChanged={onPageChanged}
                                totalItemsCount={props.totalItemsCount} pageSize={props.pageSize}/>
                     {props.users.map(u =>
-                        <User u={u} Disabled={props.Disabled} unfUser={unfUser} fUser={fUser} key={u.id} />
+                        <User u={u} Disabled={props.Disabled} unfUser={unfUser} fUser={fUser} key={u.id} status={props.status} />
                        /* <div>
                             <NavLink to={"/profile/" + u.id}>
                             {u.name}
@@ -43,9 +42,6 @@ const Users = (props) => {
                     )
                     }
                 </div>}
-{/*        <div>
-            {pages}
-        </div>*/}
         </div>
 
     )

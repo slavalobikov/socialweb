@@ -16,3 +16,6 @@ export const getIsFetching = (state) => {
 export const getDisabled = (state) => {
     return state.UsersPageReducer.isDisabled;
 };
+export const getStatusThunk = (state) => {
+    return state.ProfilePageReducer.status;
+};
