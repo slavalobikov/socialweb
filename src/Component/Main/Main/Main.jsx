@@ -9,6 +9,13 @@ import StatusHook from "./Status/StatusWithHook";
 
 const Main = (props) => {
 
+    if (!props.profile) {
+        return <Preloader/>
+    }
+
+    console.log('props', props.profile);
+    //console.log('dd',props.profile.contacts.github)
+
     let PostElement = props.profilePage.map ( p => <Post img={p.img} text={p.text} key={p.id} name={p.name} />  );
 
 
@@ -32,6 +39,15 @@ const Main = (props) => {
             {props.isOwner && <input type="file" onChange={onMainPhotoSelected}/>}
             <StatusHook status={props.status} updateStatus={props.updateStatusThunk} id={props.id} userID={props.match.params.userID} />
             <div>{props.lookingForAJob ? <div>Ищу работу</div> : <div>Не ищу работу</div>}</div>
+
+            <div>
+                <b>Контакты</b>: {
+                Object.keys(props.profile.contacts).map(key => {
+                    return <Contact key={key} contactTitle={key}  contactValue={props.profile.contacts[key]} />
+                })
+            }
+
+            </div>
 
             <AddPostFormRedux onSubmit={addNewPost} />
             {PostElement}
@@ -57,6 +73,12 @@ const AddPostForm = (props) => {
 };
 
 const AddPostFormRedux = reduxForm({form:"postAddPostForm"})(AddPostForm);
+
+const Contact = ({contactTitle, contactValue}) => {
+    return <div>
+        <b>{contactTitle}</b>: <span>{contactValue}</span>
+    </div>
+}
 
 
 

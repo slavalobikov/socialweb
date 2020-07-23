@@ -4,14 +4,6 @@
     <list default="true" id="77a2ed3f-7841-4e91-b137-6b75868cf242" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Main/Main/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Main/Main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Main/MainContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Main/MainContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Users/User.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Users/User.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Users/Users.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Users/Users.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Users/UsersContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Users/UsersContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Reducers/ProfileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Reducers/ProfileReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Reducers/UsersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Reducers/UsersReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Reducers/usersSelectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Reducers/usersSelectors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +36,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../web/react-way-of-samurai" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -80,6 +72,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="eject" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="eject" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="npm start" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -102,6 +104,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.eject" />
         <item itemvalue="npm.deploy" />
         <item itemvalue="npm.predeploy" />
       </list>
@@ -141,7 +144,9 @@
       <workItem from="1595437977440" duration="16549000" />
       <workItem from="1595507102722" duration="1566000" />
       <workItem from="1595511137213" duration="2839000" />
-      <workItem from="1595515254494" duration="499000" />
+      <workItem from="1595515254494" duration="2217000" />
+      <workItem from="1595517921912" duration="449000" />
+      <workItem from="1595518445474" duration="2827000" />
     </task>
     <task id="LOCAL-00001" summary="update post text">
       <created>1592854599365</created>
@@ -367,14 +372,20 @@
       <option name="project" value="LOCAL" />
       <updated>1595451185511</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="looging for a job">
+      <created>1595515837900</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1595515837900</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Profile photo in NavLink userID" />
     <MESSAGE value="Profile photo in NavLink userID with Preloader and photo of null" />
     <MESSAGE value="login in Auth" />
     <MESSAGE value="follow/unfollow with API SERVER and with govnokod" />
@@ -399,7 +410,8 @@
     <MESSAGE value="paginator" />
     <MESSAGE value="status" />
     <MESSAGE value="componentDidUpdate" />
-    <option name="LAST_COMMIT_MESSAGE" value="componentDidUpdate" />
+    <MESSAGE value="looging for a job" />
+    <option name="LAST_COMMIT_MESSAGE" value="looging for a job" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="26" key="#Deployment" timestamp="1592854175292">
@@ -410,38 +422,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="454" y="175" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1593945595703" />
-    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1595451183089">
+    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1595515831284">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1595451183089" />
-    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1595513404601">
+    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1595515831283" />
+    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1595533352352">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595513404601" />
+    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595533352352" />
     <state x="563" y="263" width="261" height="201" key="Github.ShareDialog" timestamp="1592854438965">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="563" y="263" width="261" height="201" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1592854438965" />
-    <state width="1345" height="392" key="GridCell.Tab.0.bottom" timestamp="1595437905530">
+    <state width="1345" height="392" key="GridCell.Tab.0.bottom" timestamp="1595517492405">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="392" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595437905530" />
-    <state width="1345" height="392" key="GridCell.Tab.0.center" timestamp="1595437905530">
+    <state width="1345" height="392" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595517492405" />
+    <state width="1345" height="392" key="GridCell.Tab.0.center" timestamp="1595517492405">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="392" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595437905530" />
-    <state width="1345" height="392" key="GridCell.Tab.0.left" timestamp="1595437905529">
+    <state width="1345" height="392" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595517492405" />
+    <state width="1345" height="392" key="GridCell.Tab.0.left" timestamp="1595517492404">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="392" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595437905529" />
-    <state width="1345" height="392" key="GridCell.Tab.0.right" timestamp="1595437905530">
+    <state width="1345" height="392" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595517492404" />
+    <state width="1345" height="392" key="GridCell.Tab.0.right" timestamp="1595517492405">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="392" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595437905530" />
-    <state x="275" y="89" key="Vcs.Push.Dialog.v2" timestamp="1595451188656">
+    <state width="1345" height="392" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595517492405" />
+    <state x="275" y="89" key="Vcs.Push.Dialog.v2" timestamp="1595515848749">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="89" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1595451188656" />
+    <state x="275" y="89" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1595515848749" />
     <state x="338" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595452295946">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
