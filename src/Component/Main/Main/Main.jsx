@@ -10,20 +10,15 @@ import DescriptoinStatusForm from "./Description/Description";
 
 const Main = (props) => {
 
-
     if (!props.profile) {
         return <Preloader/>
     }
-
     const handleSubmit = (formData) => {
         console.log('formData', formData)
     };
-
-
     let PostElement = props.profilePage.map(p => <Post img={p.img} text={p.text} key={p.id}
                                                        name={p.name} fullname={props.profile.fullName}
                                                        photo={props.profile.photos.large}/>);
-
 
     const addNewPost = (postData) => {
         props.addPost(postData.newPostBody)
@@ -34,8 +29,6 @@ const Main = (props) => {
             props.savePhoto(e.target.files[0])
         }
     };
-
-    console.log('main', props.profile);
 
 
     return (

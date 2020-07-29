@@ -1,36 +1,28 @@
 
-.imgAva {
-    width:150px;
-    height: 150px;
-    border-radius: 150px;
-    padding-left: 15px;
-    padding-bottom: 15px;
-}
-
 .post {
-    border: 3px red double;
-    margin-top: 20px;
-    margin-left: 10%;
-    margin-right: 10%;
-    background-color: whitesmoke;
-    border-radius: 25px;
-
-
-
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    background: whitesmoke;
+    border-radius: 25px ;
+    margin: 3em;
 }
 
-.name {
-    padding-top: 10px;
-    text-align: center;
+.post img {
+    width: 150px;
+    border-radius: 100%;
+    margin: 15px;
 }
-
-.obj div {
-    display:inline-block;
+.postArea {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
 }
-.text {
+.postName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.gg {
-    border: 3px khaki double;
-    width: 80%;
+.postText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

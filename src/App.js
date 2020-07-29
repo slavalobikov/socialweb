@@ -9,7 +9,6 @@ import UsersContainer from "./Component/Main/Users/UsersContainer";
 import HeaderContainer from "./Component/Header/HeaderContaine";
 import Login from "./Component/Main/Login/Login";
 import {connect} from "react-redux";
-import {authmeThunk} from "./Redux/Reducers/AuthReducer";
 import {initializeApp} from "./Redux/Reducers/AppReducer";
 import Preloader from "./common/Preloader";
 
@@ -29,7 +28,7 @@ class App extends React.Component {
             <div className={"App"}>
                 <HeaderContainer/>
                 <Route path='/profile/:userID?' render={() => <MainContainer/>}/>
-                <Route path="/dialogs" component={Dialogs}/>
+                <Route path="/dialogs/:userID?" component={Dialogs}/>
                 <Route path="/users" component={UsersContainer}/>
                 <Route path="/login" component={Login}/>
 

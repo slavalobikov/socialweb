@@ -47,7 +47,6 @@
 }
 
 .posts {
-    border: 3px yellow double;
     grid-area: posts;
     margin-top: 50px;
 }
