@@ -1,0 +1,12 @@
+.content {
+    grid-area: description;
+    /*
+    border: 3px yellow double;
+    */
+    text-align: center;
+    background-color: whitesmoke;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 25px;
+}

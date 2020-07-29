@@ -1,6 +1,55 @@
 .content {
-
-    height: 1400px;
-    background-color: red;
+    background-color: darkgray;
     padding-top: 150px;
+    display: grid;
+    grid-template-areas:
+    "ava me me"
+    "ava description description"
+    "ava description description"
+    "posts posts posts"
+
+;
+
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.ava {
+    grid-area: ava;
+    /*
+    border: 3px yellow double;
+    */
+    background-color: whitesmoke;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 25px;
+
+}
+
+.ava img {
+    margin-top: 10px;
+    border-radius: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.me {
+    grid-area: me;
+    text-align: center;
+    /*
+    border: 3px yellow double;
+    */
+    background-color: whitesmoke;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 25px;
+}
+
+.posts {
+    border: 3px yellow double;
+    grid-area: posts;
+    margin-top: 50px;
+    text-align: center;
+
 }

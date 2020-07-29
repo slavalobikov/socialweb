@@ -52,6 +52,6 @@ const  LoginReduxForm  = reduxForm({form: 'login'})(LoginForm);
 
 const mapStateToProps = (state) => ({
     isAuth:state.AuthPageReducer.isAuth
-})
+});
 
 export default connect(mapStateToProps,{setDataLoginThunk})(Login);
