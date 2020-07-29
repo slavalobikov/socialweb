@@ -20,7 +20,9 @@ const Main = (props) => {
     };
 
 
-    let PostElement = props.profilePage.map(p => <Post img={p.img} text={p.text} key={p.id} name={p.name}/>);
+    let PostElement = props.profilePage.map(p => <Post img={p.img} text={p.text} key={p.id}
+                                                       name={p.name} fullname={props.profile.fullName}
+                                                       photo={props.profile.photos.large}/>);
 
 
     const addNewPost = (postData) => {
@@ -33,6 +35,8 @@ const Main = (props) => {
         }
     };
 
+    console.log('main', props.profile);
+
 
     return (
         <div className={s.content}>
@@ -41,7 +45,6 @@ const Main = (props) => {
                     <img
                         src={!props.photo ? 'https://img8.eadaily.com/r650x450/o/7ac/95f49146b4501082acd22918d4cc2.jpg' : props.photo}
                         alt=""/>
-
                     {props.isOwner && <input type="file" onChange={onMainPhotoSelected}/>}
                 </div>
             }
@@ -49,11 +52,14 @@ const Main = (props) => {
                 {props.profile.fullName}
                 <StatusHook status={props.status} updateStatus={props.updateStatusThunk} id={props.id}
                             userID={props.match.params.userID}/>
+
+                            <div>Обо мне: {props.profile.aboutMe}</div>
+
             </div>
             <DescriptoinStatusForm handleSubmit={handleSubmit} contacts={props.profile.contacts}
-                                   lookingForAJob={props.lookingForAJob}/>
+                                   lookingForAJob={props.lookingForAJob} isOwner={props.isOwner}/>
             <div className={s.posts}>
-                <AddPostFormRedux onSubmit={addNewPost}/>
+                {props.isOwner &&  <AddPostFormRedux onSubmit={addNewPost}/> }
                 {PostElement}
             </div>
 
@@ -67,9 +73,11 @@ const maxLength = maxLengthCreator(300);
 const AddPostForm = (props) => {
     return (
         <form onSubmit={props.handleSubmit}>
-            <Field component={"textarea"} name={"newPostBody"} placeholder={"Написать пост"}
-                   validate={[required, maxLength]}/>
-            <button>Отрправить</button>
+            <div ><Field className={s.input} component={"textarea"} name={"newPostBody"} placeholder={"Написать пост"}
+                        validate={[required, maxLength]}/></div>
+            <div>
+                <button className={s.btn}>Отрправить</button>
+            </div>
         </form>
 
     )

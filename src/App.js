@@ -1,8 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Header from "./Component/Header/Header";
-import Main from "./Component/Main/Main/Main";
 import Footer from "./Component/Footer/Footer";
 import Dialogs from "./Component/Main/Dialogs/Dialogs";
 import {BrowserRouter, Route} from "react-router-dom";
@@ -48,6 +45,6 @@ const mapStateToProps = (state) => {
     return {
         initialized:state.AppReducer.initialized,
     }
-}
+};
 
 export default connect(mapStateToProps, {initializeApp})(App);

@@ -2,5 +2,35 @@
 .imgAva {
     width:150px;
     height: 150px;
-    border-radius: 50px;
+    border-radius: 150px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+.post {
+    border: 3px red double;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: whitesmoke;
+    border-radius: 25px;
+
+
+
+}
+
+.name {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.obj div {
+    display:inline-block;
+}
+.text {
+}
+
+.gg {
+    border: 3px khaki double;
+    width: 80%;
 }

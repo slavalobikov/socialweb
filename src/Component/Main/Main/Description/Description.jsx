@@ -5,7 +5,7 @@ import s from './Description.module.css';
 
 
 
-const Description = ({contacts, lookingForAJob, handleSubmit}) => {
+const Description = ({contacts, lookingForAJob, handleSubmit, isOwner}) => {
 
     const [editMode, setEditMode] = useState(false);
 
@@ -26,7 +26,7 @@ const Description = ({contacts, lookingForAJob, handleSubmit}) => {
                     </form>
                   </div>
                 : <div>
-                    <button onClick={() => setEditMode(true)}>Изменить данные</button>
+                    {isOwner ?<button onClick={() => setEditMode(true)}>Изменить данные</button> : <div> </div>}
                     <div>{lookingForAJob ? <div>Ищу работу</div> : <div>Не ищу работу</div>}</div>
 
                     <div>

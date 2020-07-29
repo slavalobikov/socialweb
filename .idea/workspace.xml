@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77a2ed3f-7841-4e91-b137-6b75868cf242" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Component/Main/Main/Description/Description.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Component/Main/Main/Description/Description.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/Me/Me.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/Me/Me.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Main/Main/Description/Description.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Main/Description/Description.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Main/Main/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Main/Main.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Main/Main/Main.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Main/Main.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Main/Main/Post/Post.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Main/Post/Post.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Main/Main/Post/Post.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Main/Post/Post.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +154,7 @@
       <workItem from="1595518445474" duration="4779000" />
       <workItem from="1595865669930" duration="11658000" />
       <workItem from="1595922486050" duration="6638000" />
-      <workItem from="1596011833879" duration="6071000" />
+      <workItem from="1596011833879" duration="12146000" />
     </task>
     <task id="LOCAL-00001" summary="update post text">
       <created>1592854599365</created>
@@ -394,7 +394,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595534829765</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="main">
+      <created>1596023242977</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1596023242978</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,10 +444,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="454" y="175" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1593945595703" />
-    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1595534825295">
+    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1596030102795">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1595534825295" />
+    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1596030102795" />
     <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1595967047871">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -465,10 +472,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1345" height="392" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595517492405" />
-    <state x="275" y="89" key="Vcs.Push.Dialog.v2" timestamp="1595534852136">
+    <state x="275" y="89" key="Vcs.Push.Dialog.v2" timestamp="1596023247339">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="89" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1595534852136" />
+    <state x="275" y="89" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1596023247339" />
     <state x="338" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595452295946">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
