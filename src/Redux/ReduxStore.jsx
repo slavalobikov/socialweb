@@ -5,6 +5,7 @@ import UsersPageReducer from "./Reducers/UsersReducer";
 import AuthPageReducer from "./Reducers/AuthReducer";
 import { reducer as formReducer  } from  "redux-form"
 import AppReducer from "./Reducers/AppReducer";
+import dialogsReducer from "./Reducers/DialogReducer";
 
 let reducers = combineReducers({
     ProfilePageReducer,
@@ -12,6 +13,7 @@ let reducers = combineReducers({
     AuthPageReducer,
     form:formReducer,
     AppReducer,
+    dialogsReducer,
 });
 
 

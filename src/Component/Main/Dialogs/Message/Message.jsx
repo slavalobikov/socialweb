@@ -3,28 +3,28 @@ import s from './Message.module.css'
 import {NavLink} from "react-router-dom";
 
 
-const Dialogs = (props) => {
 
+
+const Dialogs = (props) => {
+    console.log('dialogsReducer', props.dialogsReducer);
+    let PersonElement = props.dialogsReducer.users.map(p => (
+        <NavLink activeClassName={s.active} to={`/dialogs/${p.id}`}><DialogItem key={p.id} name={p.name} img={p.img} /></NavLink>
+    ))
     return (
         <div className={s.dialogs}>
-            <div className={s.dilogsItems}>
-                <div className={s.dialog}>
-                   <NavLink to="/dialogs/1" >Dima</NavLink>
-                </div>
-                <div className={s.dialog}>
-                    <NavLink to="/dialogs/2" >Sasha</NavLink>
-                </div>
-                <div className={s.dialog}>
-                    <NavLink to="/dialogs/3" >Sveta</NavLink>
-                </div>
-            </div>
-            <div className={s.messages}>
-                <div className={s.dialog}>ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</div>
-
-            </div>
+{/*
+            <NavLink activeClassName={s.active} to="/dialogs/1"><DialogItem /></NavLink>
+*/}
+            {PersonElement}
         </div>
 
     )
+};
+const DialogItem = ({name, img}) => {
+    return <div className={s.DialogItem}>
+        <div><img src={img} alt=""/></div>
+        <div>{name}</div>
+    </div>
 };
 
 export default Dialogs;

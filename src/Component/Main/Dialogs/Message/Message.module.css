@@ -1,13 +1,46 @@
 .dialogs {
     margin-left: 250px;
-    display: grid;
-    grid-template-columns: 4fr 1fr;
+    background-color: whitesmoke;
+
+    /*    display: grid;
+        grid-template-columns: 4fr 1fr;*/
 }
 
-.dilogsItems {
+/*.dilogsItems {
     padding: 10px;
 }
 
 .messages {
     padding: 10px;
+}*/
+
+.dialogs a {
+    color: black;
+    text-decoration: none;
+}
+
+.DialogItem img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50px;
+    margin-right: 15px;
+
+
+}
+
+.dialogs a.active div {
+    background-color: gold;
+}
+
+.DialogItem {
+    display: flex;
+    align-items: center;
+    /*
+    border: yellow 3px double;
+    */
+}
+
+
+.DialogItem:hover {
+    background-color: gainsboro;
 }

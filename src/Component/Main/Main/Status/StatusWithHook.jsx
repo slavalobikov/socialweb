@@ -21,13 +21,7 @@ const StatusHook = (props) => {
 
     const activateEditeMode = () => {
         setEditMode(true)
-        /*if (props.id === props.userID) {
-            return alert('hello')
-/!*            return (
-                setEditMode(true)
-                alert('hello')
-            ) *!/
-        }*/
+
     };
 
     const onStatusChange = (e) => {

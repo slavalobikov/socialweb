@@ -40,6 +40,8 @@ class MeContainer extends React.Component {
 let mapStateToProps = (state) => ( {
 
     profile: state.ProfilePageReducer.profile,
+    dialogsReducer:state.dialogsReducer,
+
 });
 
 

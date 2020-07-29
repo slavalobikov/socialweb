@@ -1,14 +1,14 @@
 import React from 'react';
 import s from './Dialogs.module.css'
-import Message from "./Message/Message";
 import MeContainer from "./Me/MeContainer";
+import MessageContainer from "./Message/MessageContainer";
 
 const Dialogs = (props) => {
 
     return (
         <div className={s.content}>
             <MeContainer />
-            <Message />
+            <MessageContainer />
         </div>
 
     )
