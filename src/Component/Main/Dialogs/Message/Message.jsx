@@ -6,15 +6,11 @@ import {NavLink} from "react-router-dom";
 
 
 const Dialogs = (props) => {
-    console.log('dialogsReducer', props.dialogsReducer);
     let PersonElement = props.dialogsReducer.users.map(p => (
-        <NavLink activeClassName={s.active} to={`/dialogs/${p.id}`}><DialogItem key={p.id} name={p.name} img={p.img} /></NavLink>
-    ))
+        <NavLink key={p.id} activeClassName={s.active} to={`/dialogs/${p.id}`}><DialogItem  name={p.name} img={p.img} /></NavLink>
+    ));
     return (
         <div className={s.dialogs}>
-{/*
-            <NavLink activeClassName={s.active} to="/dialogs/1"><DialogItem /></NavLink>
-*/}
             {PersonElement}
         </div>
 

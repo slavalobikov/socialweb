@@ -9,7 +9,6 @@ const Me = (props) => {
         return <Preloader/>
     }
     let id = props.match.params.userID;
-    console.log('props', props.dialogsReducer.users[id-1]);
 
     return (
         <div className={s.me} id="navbar">

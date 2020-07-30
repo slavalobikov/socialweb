@@ -1,27 +1,19 @@
 .me {
-    position: fixed;
+    margin-left: 50px;
 }
 
 .me img {
     width: 150px;
     height: 150px;
-    border-radius: 150px;
+    border-radius: 100%;
     padding-top: 15px;
-    display: block;
-    margin: 0 auto;
 }
 
 .nameme {
     padding-top: 15px;
-    text-align: center;
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
     font-size: 20px;
 }
 
 
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}

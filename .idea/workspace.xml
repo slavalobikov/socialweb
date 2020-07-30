@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77a2ed3f-7841-4e91-b137-6b75868cf242" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/Message/MessageContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Redux/Reducers/DialogReducer.js" afterDir="false" />
+    <list default="true" id="77a2ed3f-7841-4e91-b137-6b75868cf242" name="Default Changelist" comment="message beta">
+      <change afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/MessageArea/MessageArea.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/MessageArea/MessageArea.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/MessageArea/MessageAreaContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/Dialogs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/Dialogs.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/Dialogs.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/Me/Me.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/Me/Me.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/Me/MeContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/Me/MeContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/Me/Me.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/Me/Me.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/Message/Message.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/Message/Message.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/Message/Message.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/Message/Message.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Main/Status/StatusWithHook.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Main/Status/StatusWithHook.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/ReduxStore.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/ReduxStore.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/Reducers/DialogReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Reducers/DialogReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +44,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Component/Main/Dialogs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Component/Main/Dialogs/MessageArea" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -56,11 +56,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\socialweb\src\Component\Main\Dialogs\MessageArea" />
       <recent name="D:\socialweb\src\Component\Main\Dialogs" />
       <recent name="D:\socialweb\src\Component\Main\Main\Description" />
       <recent name="D:\socialweb\src\Component\Main\Main\Status" />
       <recent name="D:\socialweb\src\Redux\Reducers" />
-      <recent name="D:\socialweb\src\common\FormConrols" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\socialweb\src\Component\Main\Main" />
@@ -157,7 +157,7 @@
       <workItem from="1595518445474" duration="4779000" />
       <workItem from="1595865669930" duration="11658000" />
       <workItem from="1595922486050" duration="6638000" />
-      <workItem from="1596011833879" duration="26771000" />
+      <workItem from="1596011833879" duration="34290000" />
     </task>
     <task id="LOCAL-00001" summary="update post text">
       <created>1592854599365</created>
@@ -418,15 +418,20 @@
       <option name="project" value="LOCAL" />
       <updated>1596051212264</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="MessagexD">
+      <created>1596062164600</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1596062164601</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="disabled button" />
-    <MESSAGE value="Thunk" />
     <MESSAGE value="auth redirect and Hight order components" />
     <MESSAGE value="compose" />
     <MESSAGE value="get User STatus" />
@@ -450,7 +455,9 @@
     <MESSAGE value="main" />
     <MESSAGE value="main v1.0" />
     <MESSAGE value="Me" />
-    <option name="LAST_COMMIT_MESSAGE" value="Me" />
+    <MESSAGE value="MessagexD" />
+    <MESSAGE value="message beta" />
+    <option name="LAST_COMMIT_MESSAGE" value="message beta" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="26" key="#Deployment" timestamp="1592854175292">
@@ -461,10 +468,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="454" y="175" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1593945595703" />
-    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1596062158242">
+    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1596069682516">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1596062158242" />
+    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1596069682516" />
     <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1595967047871">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -489,18 +496,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1345" height="392" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596055052987" />
-    <state x="275" y="89" key="Vcs.Push.Dialog.v2" timestamp="1596051278365">
+    <state x="275" y="89" key="Vcs.Push.Dialog.v2" timestamp="1596062174203">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="89" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1596051278365" />
+    <state x="275" y="89" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1596062174203" />
     <state x="338" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595452295946">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="338" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1595452295946" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1595451581643">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1596067545933">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1595451581643" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1596067545933" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1593945556438">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
