@@ -17,6 +17,9 @@
 .header a.active {
     color:darkorange;
 }
+.header a:hover {
+    color:gold;
+}
 
 .auth {
     float:right;
@@ -31,7 +34,7 @@
 
 
 
-.logout:hover {
+.logout a:hover {
     color: gold;
 
 }

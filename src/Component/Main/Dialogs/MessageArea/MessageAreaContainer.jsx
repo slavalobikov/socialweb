@@ -1,12 +1,11 @@
 import {connect} from "react-redux";
-/*
-import React from 'react'
-*/
+
 
 import {withRouter} from "react-router-dom";
 import {withAuthRedirect} from "../../../../hoc/withAuthRedirect";
 import {compose} from "redux";
 import MessageArea from "./MessageArea";
+import {sendMessageCreator} from "../../../../Redux/Reducers/DialogReducer";
 
 
 
@@ -17,7 +16,7 @@ let mapStateToProps = (state) => ( {
 
 
 export default compose (
-    connect(mapStateToProps, {}),
+    connect(mapStateToProps,),
     withRouter,
     withAuthRedirect,
     /*withProfileInfo,*/

@@ -63,7 +63,7 @@ const ProfilePageReducer = (state = initialState, action ) => {
             }
         }
         case SAVE_PHOTO_SUCCESS:
-            return {...state, photo: action.photos}
+            return {...state, photo: action.photos};
         case SET_USER_PROFILE: {
             return {...state, profile: action.profile}
         }
@@ -79,8 +79,7 @@ const ProfilePageReducer = (state = initialState, action ) => {
 export const setPhotoUser = (photo) => ({type: SET_PHOTO_USER, photo});
 export const setStatusUser = (status) => ({type: SET_STATUS_USER, status});
 export const savePhotoSuccess = (photos) => ({type:SAVE_PHOTO_SUCCESS, photos});
-
-export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile})
+export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile});
 
 export const getStatusThunk = (id) => async (dispatch) => {
         let response = await profileAPI.getStatus(id);
@@ -91,7 +90,7 @@ export const getProfileThunk = (userID) => async (dispatch) => {
             dispatch(isFetching(true));
             let response = await profileAPI.getProfile(userID);
             dispatch(setPhotoUser(response.photos.large));
-            dispatch(setUserProfile(response))
+            dispatch(setUserProfile(response));
             dispatch(getStatusThunk(userID));
             dispatch(isFetching(false))
 };

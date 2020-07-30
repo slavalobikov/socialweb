@@ -1,5 +1,5 @@
 .MessageArea {
-    border: 3px olivedrab double;
+    margin: 10px;
 }
 
 .right {
@@ -11,6 +11,7 @@
 .message {
     height: 50px;
     margin-top: 1em;
+
     background-color: gainsboro;
     border-radius: 15px;
 

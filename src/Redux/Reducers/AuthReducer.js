@@ -1,8 +1,10 @@
 import {authAPI, authme} from "../../api/api";
 import {stopSubmit} from "redux-form"
 
-const SET_USER_DATA = 'SET_USER_DATA';
+const SET_HELLO ='SET_HELLO';
 
+const SET_USER_DATA = 'SET_USER_DATA';
+const LOGOUT = 'LOGOUT';
 let initialState = {
     id:null,
     email:null,
@@ -10,6 +12,7 @@ let initialState = {
     isAuth:false,
     password:null,
     rememberMe:null,
+    hello: false
 };
 
 const AuthPageReducer = (state = initialState, action) => {
@@ -19,11 +22,24 @@ const AuthPageReducer = (state = initialState, action) => {
                 ...state,
                 ...action.payload,
             };
+        case SET_HELLO:
+            return  {
+                ...state,
+                hello: action.bool
+            };
+        case LOGOUT:
+            return {
+                ...state,
+                isAuth:false,
+                login:null,
+            };
         default: return state
     }
-
-
 };
+
+export const logoutAC = () => ({type: LOGOUT})
+
+export const HelloAC = (bool) => ({type:SET_HELLO, bool})
 
 export const setUserData = (id, email, login, isAuth) => ({type:SET_USER_DATA, payload:{id, email, login, isAuth} });
 
@@ -47,10 +63,11 @@ export const authmeThunk = () => async (dispatch) => {
 
 export const logout = (bool) => async (dispatch) => {
         let response = await authAPI.logout();
-            if (response.resultCode === 0) {
-                dispatch(setUserData(null, null, null, false))
-            }
-};
+        if (response.data.resultCode === 0){
+            dispatch(setUserData(null, null, null, false))
+        }
+            };
+
 
 
 export default AuthPageReducer;

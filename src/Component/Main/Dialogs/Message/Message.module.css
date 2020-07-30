@@ -1,19 +1,14 @@
 .dialogs {
     margin-left: 250px;
-    background-color: whitesmoke;
+    background-color: honeydew;
 
-    /*    display: grid;
-        grid-template-columns: 4fr 1fr;*/
 }
 
-/*.dilogsItems {
-    padding: 10px;
+
+.dialogs a div {
+    margin-top: 1em;
+
 }
-
-.messages {
-    padding: 10px;
-}*/
-
 .dialogs a {
     color: black;
     text-decoration: none;
@@ -24,7 +19,6 @@
     height: 75px;
     border-radius: 50px;
     margin-right: 15px;
-
 
 }
 
