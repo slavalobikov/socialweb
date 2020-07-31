@@ -51,10 +51,10 @@ const Main = (props) => {
             </div>
             <DescriptoinStatusForm handleSubmit={handleSubmit} contacts={props.profile.contacts}
                                    lookingForAJob={props.lookingForAJob} isOwner={props.isOwner}/>
-            <div className={s.posts}>
-                {props.isOwner &&  <AddPostFormRedux onSubmit={addNewPost}/> }
-                { PostElement.reverse()}
-            </div>
+            {props.isOwner &&<div className={s.posts}>
+                  <AddPostFormRedux onSubmit={addNewPost}/>
+                {PostElement.reverse()}
+            </div>}
 
         </div>
 
