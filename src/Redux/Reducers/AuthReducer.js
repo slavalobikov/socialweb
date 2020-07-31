@@ -1,5 +1,6 @@
-import {authAPI, authme} from "../../api/api";
+import {authAPI} from "../../api/api";
 import {stopSubmit} from "redux-form"
+import {isFetching} from "./UsersReducer";
 
 const SET_HELLO ='SET_HELLO';
 
@@ -56,9 +57,12 @@ export const setDataLoginThunk = (email, password) => async (dispatch) => {
 
 export const authmeThunk = () => async (dispatch) => {
         let response = await  authAPI.authme();
-            if (response.resultCode === 0) {
+    dispatch(isFetching(true));
+    if (response.resultCode === 0) {
                 dispatch(setUserData(response.data.id, response.data.email, response.data.login , true))
             }
+    dispatch(isFetching(false));
+
 };
 
 export const logout = (bool) => async (dispatch) => {

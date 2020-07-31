@@ -132,12 +132,10 @@ const IS_FETCHING = 'IS_FETCHING';
 
 export const getUserAC = (currentPage, pageSize) => {
     return async (dispatch) => {
-        //dispatch(isFetchingTrue());
         dispatch(isFetching(true));
         let response = await userAPI.getUsers(currentPage, pageSize);
         dispatch(setUsers(response.items));
         dispatch(setTotalUsersCount(response.totalCount));
-        //dispatch(isFetchingFalse());
         dispatch(isFetching(false))
     }
 };

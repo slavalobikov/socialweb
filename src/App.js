@@ -26,7 +26,12 @@ class App extends React.Component {
 
         return (
             <div className={"App"}>
-                <HeaderContainer/>
+
+
+
+
+                <HeaderContainer />
+
                 <Route path='/profile/:userID?' render={() => <MainContainer/>}/>
                 <Route path="/dialogs/:userID?" component={Dialogs}/>
                 <Route path="/users" component={UsersContainer}/>

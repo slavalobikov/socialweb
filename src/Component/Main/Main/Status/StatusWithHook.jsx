@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 
+import s from './StatusWithHook.module.css'
 const StatusHook = (props) => {
 
     let userID = props.userID;
@@ -34,7 +35,7 @@ const StatusHook = (props) => {
                 ? (props.id == userID)
                     ? <div> <input onChange={onStatusChange} onBlur={deactivateEditeMode}
                                 autoFocus={true} value={status} /></div>
-                    : <div onClick={activateEditeMode }>Status:{props.status || <span>3% </span>}</div>
+                    : <div onClick={activateEditeMode }><span className={s.color}>Статус:</span>{props.status || <span>3% </span>}</div>
                 :  <div onClick={activateEditeMode }>Status:{props.status || <span>3% </span>}</div>
             }
 

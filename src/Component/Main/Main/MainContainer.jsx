@@ -11,6 +11,7 @@ import {
 } from "../../../Redux/Reducers/ProfileReducer";
 import {withRouter} from "react-router-dom";
 import {compose} from "redux";
+import {withAuthRedirect} from "../../../hoc/withAuthRedirect";
 
 
 class MainContainer extends React.Component {
@@ -80,5 +81,5 @@ export default connect(mapStateToProps, mapDispatchToProps)(withURLDataContainer
 export default compose (
     connect(mapStateToProps, mapDispatchToProps),
     withRouter,
-    //withAuthRedirect,
+    withAuthRedirect,
 )(MainContainer)

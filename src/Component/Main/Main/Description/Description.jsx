@@ -41,11 +41,6 @@ const Description = ({contacts, lookingForAJob, handleSubmit, isOwner}) => {
     </div>
 };
 
-/*a = form
-const DescriptoinStatusForm = reduxForm({
-    form: 'descriptionStatus'
-})(a);
-export DescriptoinStatusForm*/
 
 const DescriptoinStatusForm = reduxForm({
     form: 'descriptionStatus'

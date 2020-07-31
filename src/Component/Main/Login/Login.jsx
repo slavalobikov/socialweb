@@ -7,6 +7,7 @@ import {Input} from "../../../common/FormConrols/FormsControls";
 import {required} from "../../../utils/validators/validators";
 import {Redirect} from "react-router-dom";
 import style from "./../../../common/FormConrols/FormsControls.module.css"
+import Preloader from "../../../common/Preloader";
 
 
 const Login = (props) => {
@@ -14,11 +15,14 @@ const Login = (props) => {
     const onSubmit = (formData) => {
         props.setDataLoginThunk(formData.Login, formData.Password);
         console.log(formData.Password)
-        //console.log(formData)
     };
 
     if (props.isAuth) {
         return <Redirect to="/profile" />
+    }
+
+    if (props.isFetching) {
+        return  <Preloader/>
     }
 
     return (
@@ -52,6 +56,7 @@ const  LoginReduxForm  = reduxForm({form: 'login'})(LoginForm);
 
 const mapStateToProps = (state) => ({
     isAuth:state.AuthPageReducer.isAuth,
+    isFetching:state.UsersPageReducer.isFetching,
 });
 
 export default connect(mapStateToProps,{setDataLoginThunk})(Login);

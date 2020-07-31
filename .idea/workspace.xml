@@ -2,20 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77a2ed3f-7841-4e91-b137-6b75868cf242" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Component/Main/Main/Status/StatusWithHook.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Redux/Reducers/DescriptionReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/Preloader.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Header/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Header/HeaderContaine.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Header/HeaderContaine.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/Dialogs.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/Dialogs.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/Message/Message.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/Message/Message.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/MessageArea/MessageArea.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/MessageArea/MessageArea.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/MessageArea/MessageArea.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/MessageArea/MessageArea.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/MessageArea/MessageAreaContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/MessageArea/MessageAreaContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Main/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Login/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Users/Users.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Users/Users.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Main/Main/Description/Description.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Main/Description/Description.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Main/Main/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Main/Main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Main/Main/MainContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Main/MainContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Main/Main/Status/StatusWithHook.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Main/Status/StatusWithHook.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Redux/Reducers/AuthReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Reducers/AuthReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Reducers/DialogReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Reducers/DialogReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Reducers/ProfileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Reducers/ProfileReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/FormConrols/FormsControls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/FormConrols/FormsControls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/Reducers/UsersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Reducers/UsersReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/Preloader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Preloader.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +50,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Component/Main/Dialogs/MessageArea" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Component/Main/Main/Status" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -59,15 +61,15 @@
     <property name="nodejs_package_manager_path" value="yarn" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\socialweb\src\Component\Main\Main" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\socialweb\src\Component\Main\Main\Status" />
       <recent name="D:\socialweb\src\Component\Main\Dialogs\MessageArea" />
       <recent name="D:\socialweb\src\Component\Main\Dialogs" />
       <recent name="D:\socialweb\src\Component\Main\Main\Description" />
-      <recent name="D:\socialweb\src\Component\Main\Main\Status" />
       <recent name="D:\socialweb\src\Redux\Reducers" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\socialweb\src\Component\Main\Main" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -161,7 +163,9 @@
       <workItem from="1595518445474" duration="4779000" />
       <workItem from="1595865669930" duration="11658000" />
       <workItem from="1595922486050" duration="6638000" />
-      <workItem from="1596011833879" duration="47788000" />
+      <workItem from="1596011833879" duration="49775000" />
+      <workItem from="1596122062418" duration="9580000" />
+      <workItem from="1596224381450" duration="1592000" />
     </task>
     <task id="LOCAL-00001" summary="update post text">
       <created>1592854599365</created>
@@ -436,14 +440,20 @@
       <option name="project" value="LOCAL" />
       <updated>1596069787907</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="without unlogin bug">
+      <created>1596120155301</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1596120155331</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="auth redirect and Hight order components" />
     <MESSAGE value="compose" />
     <MESSAGE value="get User STatus" />
     <MESSAGE value="API object" />
@@ -468,7 +478,8 @@
     <MESSAGE value="Me" />
     <MESSAGE value="MessagexD" />
     <MESSAGE value="message beta" />
-    <option name="LAST_COMMIT_MESSAGE" value="message beta" />
+    <MESSAGE value="without unlogin bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="without unlogin bug" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="26" key="#Deployment" timestamp="1592854175292">
@@ -495,26 +506,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="563" y="263" width="261" height="201" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1592854438965" />
-    <state width="1345" height="392" key="GridCell.Tab.0.bottom" timestamp="1596116006602">
+    <state width="1345" height="221" key="GridCell.Tab.0.bottom" timestamp="1596133740339">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="392" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596116006602" />
-    <state width="1345" height="392" key="GridCell.Tab.0.center" timestamp="1596116006601">
+    <state width="1345" height="221" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1596133740339" />
+    <state width="1345" height="221" key="GridCell.Tab.0.center" timestamp="1596133740338">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="392" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596116006601" />
-    <state width="1345" height="392" key="GridCell.Tab.0.left" timestamp="1596116006601">
+    <state width="1345" height="221" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1596133740338" />
+    <state width="1345" height="221" key="GridCell.Tab.0.left" timestamp="1596133740284">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="392" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596116006601" />
-    <state width="1345" height="392" key="GridCell.Tab.0.right" timestamp="1596116006601">
+    <state width="1345" height="221" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1596133740284" />
+    <state width="1345" height="221" key="GridCell.Tab.0.right" timestamp="1596133740339">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="392" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596116006601" />
-    <state x="275" y="89" key="Vcs.Push.Dialog.v2" timestamp="1596069838523">
+    <state width="1345" height="221" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596133740339" />
+    <state x="275" y="89" key="Vcs.Push.Dialog.v2" timestamp="1596120278995">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="89" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1596069838523" />
+    <state x="275" y="89" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1596120278995" />
     <state x="338" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595452295946">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

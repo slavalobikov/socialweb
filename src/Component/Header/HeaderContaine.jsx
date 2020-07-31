@@ -3,6 +3,8 @@ import Header from "./Header";
 import {connect} from "react-redux";
 import {authmeThunk, HelloAC, logout, logoutAC, setUserData} from "../../Redux/Reducers/AuthReducer";
 import {setPhotoUser} from "../../Redux/Reducers/ProfileReducer";
+import {compose} from "redux";
+import {withRouter} from "react-router-dom";
 
 
 class HeaderContainer extends React.Component {
@@ -25,18 +27,17 @@ class HeaderContainer extends React.Component {
 let mapStateToProps = (state) => {
     return {
         login:state.AuthPageReducer.login,
-        photo:state.AuthPageReducer.photo,
+        profilePage:state.ProfilePageReducer.profile,
         isAuth:state.AuthPageReducer.isAuth,
-        hello:state.AuthPageReducer.hello,
     }
 };
 
-export default connect(mapStateToProps, {
+export default compose(
+connect(mapStateToProps, {
     setUserData,
     setPhotoUser,
-    HelloAC,
     logoutAC,
     //authmeThunk,
-    logout,
-
-})(HeaderContainer);
+    logout,}),
+    withRouter,
+    )(HeaderContainer);
