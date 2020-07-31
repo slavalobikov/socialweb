@@ -72,11 +72,6 @@ let mapDispatchToProps = (dispatch) => {
     }
 };
 
-/*let withAuthRedirectCC = withAuthRedirect(MainContainer)
-
-let withURLDataContainerComponent = withRouter (withAuthRedirectCC);
-
-export default connect(mapStateToProps, mapDispatchToProps)(withURLDataContainerComponent);*/
 
 export default compose (
     connect(mapStateToProps, mapDispatchToProps),

@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77a2ed3f-7841-4e91-b137-6b75868cf242" name="Default Changelist" comment="" />
+    <list default="true" id="77a2ed3f-7841-4e91-b137-6b75868cf242" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/Dialogs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/Dialogs.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/Dialogs.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/Me/Me.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/Me/Me.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/Me/Me.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/Me/Me.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/Message/Message.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/Message/Message.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/Message/Message.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/Message/Message.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/MessageArea/MessageArea.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/MessageArea/MessageArea.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Main/Main/MainContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Main/MainContainer.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,15 +54,15 @@
     <property name="nodejs_package_manager_path" value="yarn" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\socialweb\src\Component\Main\Main" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\socialweb\src\Component\Main\Main\Status" />
       <recent name="D:\socialweb\src\Component\Main\Dialogs\MessageArea" />
       <recent name="D:\socialweb\src\Component\Main\Dialogs" />
       <recent name="D:\socialweb\src\Component\Main\Main\Description" />
       <recent name="D:\socialweb\src\Redux\Reducers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\socialweb\src\Component\Main\Main" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -148,7 +158,7 @@
       <workItem from="1595922486050" duration="6638000" />
       <workItem from="1596011833879" duration="49775000" />
       <workItem from="1596122062418" duration="9580000" />
-      <workItem from="1596224381450" duration="2284000" />
+      <workItem from="1596224381450" duration="8416000" />
     </task>
     <task id="LOCAL-00001" summary="update post text">
       <created>1592854599365</created>
@@ -437,14 +447,20 @@
       <option name="project" value="LOCAL" />
       <updated>1596226106830</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="reverse and isOwner">
+      <created>1596227059819</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1596227059819</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="get User STatus" />
     <MESSAGE value="API object" />
     <MESSAGE value="Update Status" />
     <MESSAGE value="Form with ReduxForm" />
@@ -469,7 +485,8 @@
     <MESSAGE value="message beta" />
     <MESSAGE value="without unlogin bug" />
     <MESSAGE value="reverse" />
-    <option name="LAST_COMMIT_MESSAGE" value="reverse" />
+    <MESSAGE value="reverse and isOwner" />
+    <option name="LAST_COMMIT_MESSAGE" value="reverse and isOwner" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="26" key="#Deployment" timestamp="1592854175292">
@@ -484,10 +501,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1596108134442" />
-    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1596226101594">
+    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1596227058367">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1596226101594" />
+    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1596227058367" />
     <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1595967047871">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -512,10 +529,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1345" height="221" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596133740339" />
-    <state x="275" y="89" key="Vcs.Push.Dialog.v2" timestamp="1596226655832">
+    <state x="275" y="89" key="Vcs.Push.Dialog.v2" timestamp="1596227272200">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="89" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1596226655832" />
+    <state x="275" y="89" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1596227272200" />
     <state x="338" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595452295946">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

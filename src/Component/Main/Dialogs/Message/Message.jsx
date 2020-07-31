@@ -11,7 +11,9 @@ const Dialogs = (props) => {
     ));
     return (
         <div className={s.dialogs}>
+
             {PersonElement}
+
         </div>
 
     )

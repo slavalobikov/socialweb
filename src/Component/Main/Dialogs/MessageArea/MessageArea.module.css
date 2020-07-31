@@ -1,5 +1,7 @@
 .MessageArea {
-    margin: 10px;
+    margin: 3em;
+    border: 3px violet double;
+
 }
 
 .right {

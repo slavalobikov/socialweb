@@ -1,12 +1,11 @@
 .dialogs {
     margin-left: 250px;
-    background-color: honeydew;
+
 
 }
 
 
 .dialogs a div {
-    margin-top: 1em;
 
 }
 .dialogs a {
@@ -29,12 +28,26 @@
 .DialogItem {
     display: flex;
     align-items: center;
+    background-color: whitesmoke;
     /*
-    border: yellow 3px double;
+    border-radius: 15px;
     */
+    border: gainsboro 2px double;
 }
 
 
 .DialogItem:hover {
     background-color: gainsboro;
+}
+
+.dialogs {
+    border-radius: 5px;
+    margin-top: 3em;
+    /*
+    border: 3px darkorange double;
+    */
+    background-color: whitesmoke;
+    /*
+    padding: 1em;
+    */
 }
