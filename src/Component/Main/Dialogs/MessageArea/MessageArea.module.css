@@ -1,17 +1,16 @@
 .MessageArea {
     margin: 3em;
-    border: 3px violet double;
+    background-color: whitesmoke;
+    padding-left: 15px;
+    padding-right: 15px;
 
 }
 
 .right {
-    /*
-    float: right;
-    */
+
     margin-left: 50%;
 }
 .message {
-    height: 50px;
     margin-top: 1em;
 
     background-color: gainsboro;
@@ -22,4 +21,22 @@
 .text {
     margin-left: 10px;
     margin-top: 5px;
+}
+
+.img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+
+
+.flex {
+    display: flex;
+
+}
+
+.messageText{
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
 }

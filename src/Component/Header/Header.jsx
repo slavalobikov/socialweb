@@ -7,7 +7,6 @@ import Preloader from "../../common/Preloader";
 
 const Header = (props) => {
 
-    console.log(props)
 
     if (!props.profilePage) {
         return <div>   </div>

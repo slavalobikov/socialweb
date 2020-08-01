@@ -11,6 +11,8 @@ import {sendMessageCreator} from "../../../../Redux/Reducers/DialogReducer";
 
 let mapStateToProps = (state) => ( {
     dialogsReducer:state.dialogsReducer,
+    profile: state.ProfilePageReducer.profile,
+
 });
 
 

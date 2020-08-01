@@ -3,14 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="77a2ed3f-7841-4e91-b137-6b75868cf242" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/Dialogs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/Dialogs.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/Dialogs.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/Me/Me.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/Me/Me.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/Me/Me.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/Me/Me.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/Message/Message.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/Message/Message.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Header/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/Message/Message.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/Message/Message.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/MessageArea/MessageArea.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/MessageArea/MessageArea.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/MessageArea/MessageArea.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/MessageArea/MessageArea.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Main/MainContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Main/MainContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/MessageArea/MessageAreaContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/MessageArea/MessageAreaContainer.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +155,7 @@
       <workItem from="1595922486050" duration="6638000" />
       <workItem from="1596011833879" duration="49775000" />
       <workItem from="1596122062418" duration="9580000" />
-      <workItem from="1596224381450" duration="8416000" />
+      <workItem from="1596224381450" duration="11311000" />
     </task>
     <task id="LOCAL-00001" summary="update post text">
       <created>1592854599365</created>
@@ -454,14 +451,20 @@
       <option name="project" value="LOCAL" />
       <updated>1596227059819</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="messages">
+      <created>1596232995655</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1596232995655</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="API object" />
     <MESSAGE value="Update Status" />
     <MESSAGE value="Form with ReduxForm" />
     <MESSAGE value=" componentDidUpdate in status" />
@@ -486,7 +489,8 @@
     <MESSAGE value="without unlogin bug" />
     <MESSAGE value="reverse" />
     <MESSAGE value="reverse and isOwner" />
-    <option name="LAST_COMMIT_MESSAGE" value="reverse and isOwner" />
+    <MESSAGE value="messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="messages" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="26" key="#Deployment" timestamp="1592854175292">
@@ -501,10 +505,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1596108134442" />
-    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1596227058367">
+    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1596232993503">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1596227058367" />
+    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1596232993503" />
     <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1595967047871">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -529,10 +533,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1345" height="221" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596133740339" />
-    <state x="275" y="89" key="Vcs.Push.Dialog.v2" timestamp="1596227272200">
+    <state x="275" y="89" key="Vcs.Push.Dialog.v2" timestamp="1596233000273">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="89" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1596227272200" />
+    <state x="275" y="89" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1596233000273" />
     <state x="338" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595452295946">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
