@@ -7,6 +7,8 @@ import Paginator from "../../../common/Paginator/Paginator";
 
 const Users = (props) => {
 
+    console.log('props', props);
+
     let fUser = (id) => {
         props.followUserThunk(id);
     };
@@ -25,7 +27,7 @@ const Users = (props) => {
                     <Paginator currentPage={props.currentPage} onPageChanged={onPageChanged}
                                totalItemsCount={props.totalItemsCount} pageSize={props.pageSize}/>
                     {props.users.map(u =>
-                        <User u={u} Disabled={props.Disabled} unfUser={unfUser} fUser={fUser} key={u.id} status={props.status} />
+                        <User u={u} Disabled={props.Disabled} unfUser={unfUser} fUser={fUser} key={u.id} status={u.status} />
                        /* <div>
                             <NavLink to={"/profile/" + u.id}>
                             {u.name}

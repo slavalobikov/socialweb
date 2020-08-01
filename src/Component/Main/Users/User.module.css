@@ -1,0 +1,24 @@
+.user {
+    margin-left: 20%;
+    border: 1px lightyellow double;
+    text-align: center;
+    background-color: honeydew;
+
+}
+
+.user a {
+    text-decoration: none;
+    color: black;
+}
+
+.unfollow {
+    background-color: red;
+}
+
+.follow {
+    background-color: greenyellow;
+}
+
+.user:hover {
+    background-color: lightgoldenrodyellow;
+}

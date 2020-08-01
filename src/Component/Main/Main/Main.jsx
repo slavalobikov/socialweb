@@ -5,7 +5,7 @@ import Preloader from "../../../common/Preloader";
 import {Field, reduxForm} from "redux-form";
 import {maxLengthCreator, required} from "../../../utils/validators/validators";
 import StatusHook from "./Status/StatusWithHook";
-import DescriptoinStatusForm from "./Description/Description";
+import DescriptionContainer from "./Description/DescriptionContainer";
 
 
 const Main = (props) => {
@@ -49,7 +49,7 @@ const Main = (props) => {
                             <div>Обо мне: {props.profile.aboutMe}</div>
 
             </div>
-            <DescriptoinStatusForm handleSubmit={handleSubmit} contacts={props.profile.contacts}
+            <DescriptionContainer handleSubmit={handleSubmit} contacts={props.profile.contacts}
                                    lookingForAJob={props.lookingForAJob} isOwner={props.isOwner}/>
             {props.isOwner &&<div className={s.posts}>
                   <AddPostFormRedux onSubmit={addNewPost}/>
