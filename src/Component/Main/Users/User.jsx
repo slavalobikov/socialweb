@@ -5,9 +5,6 @@ import s from './User.module.css'
 
 const User = (props) => {
 
-/*
-    console.log('props', props);
-*/
 
     return (
         <div className={s.user}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from "./Header";
 import {connect} from "react-redux";
-import {authmeThunk, HelloAC, logout, logoutAC, setUserData} from "../../Redux/Reducers/AuthReducer";
+import {logout, logoutAC, setUserData} from "../../Redux/Reducers/AuthReducer";
 import {setPhotoUser} from "../../Redux/Reducers/ProfileReducer";
 import {compose} from "redux";
 import {withRouter} from "react-router-dom";

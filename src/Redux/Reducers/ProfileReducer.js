@@ -1,6 +1,6 @@
 import {ADD_NEW_POST_TEXT} from "../ActionTypes";
 import {profileAPI} from "../../api/api";
-import {isFetching, isFetchingFalse, isFetchingTrue} from "./UsersReducer";
+import {isFetching} from "./UsersReducer";
 
 const SET_STATUS_USER = "SET_STATUS_USER";
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
@@ -120,7 +120,7 @@ export const saveProfile = (profile) => async (dispatch, getState) => {
                 dispatch(isFetching(true));
         */
     }
-}
+};
 /*export const saveProfile = (profile) => async (dispatch, getState) => {
     const userId = getState().auth.userId;
     const response = await profileAPI.saveProfile(profile);

@@ -5,7 +5,6 @@ import {withRouter} from "react-router-dom";
 import {withAuthRedirect} from "../../../../hoc/withAuthRedirect";
 import {compose} from "redux";
 import MessageArea from "./MessageArea";
-import {sendMessageCreator} from "../../../../Redux/Reducers/DialogReducer";
 
 
 

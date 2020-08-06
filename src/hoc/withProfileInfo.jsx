@@ -1,14 +1,12 @@
 import React from 'react'
-import {Redirect} from "react-router-dom";
 import {connect} from "react-redux";
 import {getProfileThunk} from "../Redux/Reducers/ProfileReducer";
-import AuthPageReducer from "../Redux/Reducers/AuthReducer";
 
-let mapStateToProps = (state) => {
+/*let mapStateToProps = (state) => {
     return {
         isAuth:state.AuthPageReducer.isAuth,
     }
-};
+};*/
 
 export const withProfileInfo = (Component) => {
 

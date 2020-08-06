@@ -2,7 +2,7 @@ import React from 'react';
 import s from './Login.module.css'
 import {Field, reduxForm} from "redux-form";
 import {connect} from "react-redux";
-import AuthPageReducer, {setDataLoginThunk} from "../../../Redux/Reducers/AuthReducer";
+import {setDataLoginThunk} from "../../../Redux/Reducers/AuthReducer";
 import {Input} from "../../../common/FormConrols/FormsControls";
 import {required} from "../../../utils/validators/validators";
 import {Redirect} from "react-router-dom";

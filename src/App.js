@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Footer from "./Component/Footer/Footer";
 import Dialogs from "./Component/Main/Dialogs/Dialogs";
-import {BrowserRouter, Route} from "react-router-dom";
+import {Route} from "react-router-dom";
 
 import MainContainer from "./Component/Main/Main/MainContainer";
 import UsersContainer from "./Component/Main/Users/UsersContainer";

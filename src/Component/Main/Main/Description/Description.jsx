@@ -1,14 +1,17 @@
 import React, {useState} from 'react';
-import {Field, reduxForm} from "redux-form";
+import {/*Field,*/ reduxForm} from "redux-form";
+/*
 import {Input} from "../../../../common/FormConrols/FormsControls";
+*/
 import s from './Description.module.css';
+/*
 import Preloader from "../../../../common/Preloader";
+*/
 
 
 
 const Description = (/*{contacts, lookingForAJob, handleSubmit, isOwner, saveProfile, } ,*/props) => {
 
-    console.log(props);
 
 
 
@@ -18,9 +21,7 @@ const Description = (/*{contacts, lookingForAJob, handleSubmit, isOwner, savePro
 
 
     const Profile = {
-/*
-            lookingForAJob: true,
-*/
+
             aboutMe: 'aboutMe',
             lookingForAJobDescription: 'Я не шучу, а играюсь',
             fullName: fullName,

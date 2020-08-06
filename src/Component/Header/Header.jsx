@@ -1,7 +1,6 @@
 import React from 'react';
 import s from './Header.module.css'
 import {NavLink} from "react-router-dom";
-import Preloader from "../../common/Preloader";
 
 
 
@@ -11,10 +10,6 @@ const Header = (props) => {
     if (!props.profilePage) {
         return <div>   </div>
     }
-
-/*
-    console.log(props.profilePage.photos.large)
-*/
 
 
     return (

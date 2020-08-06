@@ -4,7 +4,7 @@ import React from 'react'
 import Main from "./Main";
 import {ADD_NEW_POST_TEXT,} from "../../../Redux/ActionTypes";
 import {
-    getProfileThunk, savePhoto, setDataProfile,
+    getProfileThunk, savePhoto,
     setPhotoUser,
 
     updateStatusThunk
@@ -30,7 +30,7 @@ class MainContainer extends React.Component {
         this.refreshProfile();
     }
     componentDidUpdate(prevProps, prevState, snapshot) {
-        if (this.props.match.params.userID != prevProps.match.params.userID ) {
+        if (this.props.match.params.userID !== prevProps.match.params.userID ) {
             this.refreshProfile();
         }
     }

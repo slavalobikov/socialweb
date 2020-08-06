@@ -85,7 +85,7 @@ const UsersPageReducer = (state = initialState, action) => {
                 ...state,
                 isDisabled: action.bool
                     ? [...state.isDisabled, action.id]
-                    : state.isDisabled.filter(id => id != action.id)
+                    : state.isDisabled.filter(id => id !== action.id)
             }
         }
         default:
@@ -144,7 +144,7 @@ export const getUserAC = (currentPage, pageSize) => {
 const followUnfollowFlow = async (dispatch, id, apiMethod, actionCreator ) => {
     dispatch(isDisabled(true, id));
     let response = await apiMethod(id);
-    if (response == 0) {
+    if (response === 0) {
         dispatch(actionCreator(id))
     }
     dispatch(isDisabled(false, id))

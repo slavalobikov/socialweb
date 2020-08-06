@@ -32,7 +32,7 @@ const StatusHook = (props) => {
         <div>
 
             {editMode
-                ? (props.id == userID)
+                ? (props.id === userID)
                     ? <div> <input onChange={onStatusChange} onBlur={deactivateEditeMode}
                                 autoFocus={true} value={status} /></div>
                     : <div onClick={activateEditeMode }><span className={s.color}>Статус:</span>{props.status || <span>3% </span>}</div>

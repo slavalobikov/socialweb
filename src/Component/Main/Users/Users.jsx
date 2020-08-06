@@ -7,7 +7,6 @@ import Paginator from "../../../common/Paginator/Paginator";
 
 const Users = (props) => {
 
-    console.log('props', props);
 
     let fUser = (id) => {
         props.followUserThunk(id);

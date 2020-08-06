@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import s from './MessageArea.module.css'
 import cn from "classnames";
 import Preloader from "../../../../common/Preloader";
@@ -6,16 +6,11 @@ import Preloader from "../../../../common/Preloader";
 
 
 const MessageArea = (props) => {
-/*
-    <img src={m.isYou ? props.dialogsReducer.users[id-1].img} alt=""/>
-*/
+
     if (!props.profile) {
         return <Preloader/>
     }
 
-/*
-    console.log(props.profile.fullName);
-*/
     let id = props.match.params.userID;
 
     if (props.match.params.userID) {
