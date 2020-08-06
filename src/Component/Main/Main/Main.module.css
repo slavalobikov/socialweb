@@ -7,18 +7,13 @@
     "ava description description"
     "ava description description"
     "posts posts posts"
-
 ;
-
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
 }
 
 .ava {
     grid-area: ava;
-    /*
-    border: 3px yellow double;
-    */
     background-color: whitesmoke;
     margin-left: 20px;
     margin-right: 20px;
@@ -62,3 +57,27 @@
     width: 19%;
     height: 70px;
 }
+
+.zero {
+    height: 190px;
+}
+
+.form {
+    text-align: center;
+}
+
+.input {
+    border-radius: 10px;
+}
+
+.btn {
+    margin-top: 15px;
+    border-radius: 10px;
+    border: none;
+}
+
+.btn:hover {
+    background-color: aquamarine;
+}
+
+

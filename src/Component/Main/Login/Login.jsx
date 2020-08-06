@@ -27,7 +27,7 @@ const Login = (props) => {
 
     return (
         <div className={s.login}>
-            Авторизация
+            <h1>Авторизация</h1>
             <LoginReduxForm onSubmit={onSubmit} />
         </div>
         )
@@ -36,15 +36,15 @@ const Login = (props) => {
 const LoginForm = (props) => {
     return (
         <form onSubmit={props.handleSubmit}>
-            <div><Field placeholder='login' name={"Login"} component={Input}
+            <div><Field className={s.loginForm} placeholder='login' name={"Login"} component={Input}
                         validate={[required]}/>  </div>
-            <div><Field placeholder='password' name={"Password"} type={"password"} component={Input}
+            <div><Field className={s.password} placeholder='password' name={"Password"} type={"password"} component={Input}
                         validate={[required]} />  </div>
-            <div><Field type='checkbox' name={"Remember me"} component={"c"} /> Запомнить меня  </div>
+
             { props.error && <div className={style.formSummaryError}>
                 {props.error}
             </div>}
-            <div><button> Войти в акаунт </button></div>
+            <div className={s.btn}><button> Войти в акаунт </button></div>
         </form>
     )
 };

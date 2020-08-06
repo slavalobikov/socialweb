@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import s from './Main.module.css'
 import Post from "./Post/Post";
 import Preloader from "../../../common/Preloader";
@@ -30,7 +30,6 @@ const Main = (props) => {
         }
     };
 
-
     return (
         <div className={s.content}>
             {props.isFetching ? <Preloader/>
@@ -46,13 +45,13 @@ const Main = (props) => {
                 <StatusHook status={props.status} updateStatus={props.updateStatusThunk} id={props.id}
                             userID={props.match.params.userID}/>
 
-                            <div>Обо мне: {props.profile.aboutMe}</div>
-
+                <div>Обо мне: {props.profile.aboutMe}</div>
             </div>
+            {!props.isOwner && <div className={s.zero}></div>}
             <DescriptionContainer handleSubmit={handleSubmit} contacts={props.profile.contacts}
-                                   lookingForAJob={props.lookingForAJob} isOwner={props.isOwner}/>
-            {props.isOwner &&<div className={s.posts}>
-                  <AddPostFormRedux onSubmit={addNewPost}/>
+                                  lookingForAJob={props.lookingForAJob} isOwner={props.isOwner}/>
+            {props.isOwner && <div className={s.posts}>
+                <AddPostFormRedux onSubmit={addNewPost}/>
                 {PostElement.reverse()}
             </div>}
 
@@ -65,8 +64,8 @@ const maxLength = maxLengthCreator(300);
 
 const AddPostForm = (props) => {
     return (
-        <form onSubmit={props.handleSubmit}>
-            <div ><Field className={s.input} component={"textarea"} name={"newPostBody"} placeholder={"Написать пост"}
+        <form className={s.form} onSubmit={props.handleSubmit}>
+            <div><Field className={s.input} component={"textarea"} name={"newPostBody"} placeholder={"Написать пост"}
                         validate={[required, maxLength]}/></div>
             <div>
                 <button className={s.btn}>Отрправить</button>
@@ -77,14 +76,5 @@ const AddPostForm = (props) => {
 };
 
 const AddPostFormRedux = reduxForm({form: "postAddPostForm"})(AddPostForm);
-
-/*
-const Contact = ({contactTitle, contactValue}) => {
-    return <div>
-        <b>{contactTitle}</b>: <span>{contactValue}</span>
-    </div>
-}
-*/
-
 
 export default Main;

@@ -13,13 +13,14 @@ const Me = (props) => {
     return (
         <div className={s.me} id="navbar">
             <div className={s.nameme}>
-                Вы {props.profile.fullName}
+                <div>Вы:</div>
+                <div className={s.nameP}>{props.profile.fullName}</div>
 
                 <img src={props.profile.photos.large} alt=""/>
             </div>
                 {props.match.params.userID && <div className={s.pr}>
                     <div className={s.nameUser}> Пользователь:
-                        <div>{props.dialogsReducer.users[id - 1].name}</div></div>
+                        <div className={s.nameP}>{props.dialogsReducer.users[id - 1].name}</div></div>
                     <img
                         src={props.dialogsReducer.users[id - 1].img}
                         alt=""/>
