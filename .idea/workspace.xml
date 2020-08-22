@@ -3,17 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="77a2ed3f-7841-4e91-b137-6b75868cf242" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Header/HeaderContaine.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Header/HeaderContaine.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Dialogs/MessageArea/MessageArea.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Dialogs/MessageArea/MessageArea.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Login/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Login/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Main/Description/Description.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Main/Description/Description.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Main/MainContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Main/MainContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Main/Main/Status/StatusWithHook.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Main/Status/StatusWithHook.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Reducers/ProfileReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Reducers/ProfileReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/Reducers/UsersReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/Reducers/UsersReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hoc/withProfileInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/withProfileInfo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Main/Users/User.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Main/Users/User.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +36,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Component/Main/Main/Description" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -163,7 +153,10 @@
       <workItem from="1596122062418" duration="9580000" />
       <workItem from="1596224381450" duration="16354000" />
       <workItem from="1596305496800" duration="6729000" />
-      <workItem from="1596708160559" duration="5454000" />
+      <workItem from="1596708160559" duration="6358000" />
+      <workItem from="1597683376420" duration="2119000" />
+      <workItem from="1597755087491" duration="69000" />
+      <workItem from="1598102279313" duration="245000" />
     </task>
     <task id="LOCAL-00001" summary="update post text">
       <created>1592854599365</created>
@@ -487,14 +480,20 @@
       <option name="project" value="LOCAL" />
       <updated>1596712626783</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="no warning">
+      <created>1596713896879</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1596713896879</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add post with ReduxForm" />
     <MESSAGE value="login without initialization" />
     <MESSAGE value="validation" />
     <MESSAGE value="login/unlogin" />
@@ -519,7 +518,8 @@
     <MESSAGE value="messages with img and name" />
     <MESSAGE value="saveProfile" />
     <MESSAGE value="HTML" />
-    <option name="LAST_COMMIT_MESSAGE" value="HTML" />
+    <MESSAGE value="no warning" />
+    <option name="LAST_COMMIT_MESSAGE" value="no warning" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="26" key="#Deployment" timestamp="1592854175292">
@@ -534,14 +534,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1596108134442" />
-    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1596712622528">
+    <state x="321" y="0" key="CommitChangelistDialog2" timestamp="1596713894108">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1596712622528" />
-    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1595967047871">
+    <state x="321" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1596713894108" />
+    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1597755162873">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1595967047871" />
+    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597755162873" />
     <state x="563" y="263" width="261" height="201" key="Github.ShareDialog" timestamp="1592854438965">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -562,10 +562,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1345" height="220" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1596302361581" />
-    <state x="275" y="89" key="Vcs.Push.Dialog.v2" timestamp="1596712630697">
+    <state x="275" y="89" key="Vcs.Push.Dialog.v2" timestamp="1596713899469">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="89" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1596712630697" />
+    <state x="275" y="89" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1596713899469" />
     <state x="338" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595452295946">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
