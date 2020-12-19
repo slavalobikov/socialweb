@@ -1,38 +1,31 @@
-.login {
-    padding-top: 60px;
-    background-color: green;
-    height: 500px;
-    text-align: center;
-    margin-top: 15px;
+.main {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #fafafa;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.password {
-    margin-top: 20px;
-    width: 70%;
-    height: 30px;
-    font-size: 20px;
-    border-radius: 10px;
+.block {
+    width:400px;
+    height: 400px;
+    background: #ffffff;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.04204);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.btn {
-    margin-top: 10px;
-
-
+.wrapper {
+    width: 350px;
 }
 
-.loginForm {
-    width: 70%;
-    height: 30px;
-    font-size: 20px;
-    border-radius: 10px;
-
-}
-
-.btn button {
-    width:50%;
-    height: 30px;
-    font-size: 20px;
-    background-color: darkmagenta;
-    border: none;
-    border-radius: 10px;
+.flex {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
 }

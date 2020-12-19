@@ -2,12 +2,15 @@ import {authmeThunk} from "./AuthReducer";
 
 const SET_INITIALIZED = 'SET_INITIALIZED';
 
-let initialState = {
-    initialized: false,
+export type InitialStateType = {
+    initialized: boolean
+}
 
+let initialState:InitialStateType = {
+    initialized: false,
 };
 
-const AppReducer = (state = initialState, action) => {
+const AppReducer = (state = initialState, action: any):InitialStateType => {
     switch (action.type) {
         case SET_INITIALIZED:
             return {
@@ -22,9 +25,13 @@ const AppReducer = (state = initialState, action) => {
 
 };
 
-const setInitialized = () => ({type: SET_INITIALIZED});
+type SetInitializedActionType = {
+    type: typeof SET_INITIALIZED
+}
 
-export const initializeApp = () => (dispatch) => {
+const setInitialized = ():SetInitializedActionType => ({type: SET_INITIALIZED});
+
+export const initializeApp = () => (dispatch: any) => {
         let promise = dispatch(authmeThunk());
         Promise.all([promise]).then(() => {
             dispatch(setInitialized())

@@ -1,18 +1,23 @@
 import {userAPI} from "../../api/api";
 import {updateObjectInArray} from "../../utils/objectHelplers";
+import {PhotosType, UsersType} from "../../Types/types";
+
+
 
 let initialState = {
-    users: [],
+    users: [] as Array<UsersType> ,
     pageSize: 25,
     totalUsers: 0,
     currentPage: 1,
-    isFetching: true,
-    isDisabled: [],
+    isFetching: false,
+    isDisabled: [] as Array<number>,
     status:''
 };
 
+export type InitialStateType = typeof initialState
 
-const UsersPageReducer = (state = initialState, action) => {
+
+const UsersPageReducer = (state = initialState, action:any):InitialStateType => {
 
 
     switch (action.type) {
@@ -20,27 +25,11 @@ const UsersPageReducer = (state = initialState, action) => {
             return {
                 ...state,
                 users: updateObjectInArray(state.users, action.userID,"id" ,{followed:true})
-/*
-                users: state.users.map(u => {
-                    if (u.id === action.userID) {
-                        return {...u, followed: true}
-                    }
-                    return u;
-                })
-*/
             };
         case UNFOLLOW_USER: {
             return {
                 ...state,
                 users:updateObjectInArray(state.users, action.userID,"id" ,{followed:false} )
-/*
-                users: state.users.map(u => {
-                    if (u.id === action.userID) {
-                        return {...u, followed: false}
-                    }
-                    return u;
-                })
-*/
             }
         }
         case SET_USERS: {
@@ -62,18 +51,6 @@ const UsersPageReducer = (state = initialState, action) => {
                 totalUsers: action.totalCount
             }
         }
-/*        case IS_FETCHING_TRUE: {
-            return {
-                ...state,
-                isFetching: true
-            }
-        }
-        case IS_FETCHING_FALSE: {
-            return {
-                ...state,
-                isFetching: false
-            }
-        }*/
         case IS_FETCHING: {
             return {
                 ...state,
@@ -95,28 +72,54 @@ const UsersPageReducer = (state = initialState, action) => {
 
 };
 
-
-export const setUsers = (users) => ({type: SET_USERS, users});
-export const setCurrent = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage});
-export const setTotalUsersCount = (totalCount) => ({type: SET_TOTAL_USERS_COUNT, totalCount});
-export const isFetchingTrue = () => ({type: IS_FETCHING_TRUE});
-export const isFetchingFalse = () => ({type: IS_FETCHING_FALSE});
-export const follow = (userID) => {
+type SetUsers = {
+    type: typeof SET_USERS
+    users: Array<UsersType>
+}
+export const setUsers = (users:Array<UsersType>):SetUsers => ({type: SET_USERS, users});
+type SetCurrent = {
+    type: typeof SET_CURRENT_PAGE
+    currentPage: number
+}
+export const setCurrent = (currentPage: number):SetCurrent => ({type: SET_CURRENT_PAGE, currentPage});
+type SetTotalUsersCount = {
+    type: typeof SET_TOTAL_USERS_COUNT
+    totalCount: number
+}
+export const setTotalUsersCount = (totalCount: number):SetTotalUsersCount => ({type: SET_TOTAL_USERS_COUNT, totalCount});
+type Follow = {
+    type: typeof FOLLOW_USER
+    userID: number
+}
+export const follow = (userID: number):Follow => {
     return {
         type: FOLLOW_USER,
         userID
     }
 };
-export const unfollow = (userID) => {
+type Unfollow = {
+    type: typeof UNFOLLOW_USER
+    userID: number
+}
+export const unfollow = (userID: number):Unfollow => {
     return {
         type: UNFOLLOW_USER,
         userID
     }
 };
-export const isDisabled = (bool, id) => {
+type IsDisabled = {
+    type: typeof IS_DISABLED
+    bool: boolean,
+    id: number
+}
+export const isDisabled = (bool: boolean, id: number):IsDisabled => {
     return ({type: IS_DISABLED, bool, id})
 };
-export const isFetching = (bool) => ({type: IS_FETCHING, bool });
+type IsFetching = {
+    type: typeof IS_FETCHING
+    bool: boolean
+}
+export const isFetching = (bool: boolean):IsFetching => ({type: IS_FETCHING, bool });
 
 
 export const SET_USERS = "SET_USERS";
@@ -125,13 +128,12 @@ const FOLLOW_USER = "FOLLOW_USER";
 const UNFOLLOW_USER = "UNFOLLOW_USER";
 const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
 const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
-const IS_FETCHING_TRUE = 'IS_FETCHING_TRUE';
-const IS_FETCHING_FALSE = 'IS_FETCHING_FALSE';
+
 const IS_DISABLED = 'IS_DISABLED';
 const IS_FETCHING = 'IS_FETCHING';
 
-export const getUserAC = (currentPage, pageSize) => {
-    return async (dispatch) => {
+export const getUserAC = (currentPage:number, pageSize:number) => {
+    return async (dispatch: any) => {
         dispatch(isFetching(true));
         let response = await userAPI.getUsers(currentPage, pageSize);
         dispatch(setUsers(response.items));
@@ -141,7 +143,7 @@ export const getUserAC = (currentPage, pageSize) => {
 };
 
 
-const followUnfollowFlow = async (dispatch, id, apiMethod, actionCreator ) => {
+const followUnfollowFlow = async (dispatch:any, id:number, apiMethod:any, actionCreator:any ) => {
     dispatch(isDisabled(true, id));
     let response = await apiMethod(id);
     if (response === 0) {
@@ -149,18 +151,18 @@ const followUnfollowFlow = async (dispatch, id, apiMethod, actionCreator ) => {
     }
     dispatch(isDisabled(false, id))
 };
-export const followUserThunk = (id) => async (dispatch) => {
+export const followUserThunk = (id:number) => async (dispatch: any) => {
     let apiMethod = userAPI.followUser.bind(userAPI);
     let actionCreator = follow;
     followUnfollowFlow(dispatch, id, apiMethod, actionCreator)
 };
-export const unfollowUserThunk = (id) => async (dispatch) => {
+export const unfollowUserThunk = (id:number) => async (dispatch:any) => {
     let apiMethod = userAPI.unfollowUser.bind(userAPI);
     let actionCreator = unfollow;
     followUnfollowFlow(dispatch, id, apiMethod, actionCreator)
 };
 
-export const onPageChangedThunk = (pageNumber, pageSize) => async (dispatch) => {
+export const onPageChangedThunk = (pageNumber: number, pageSize: number) => async (dispatch:any) => {
     //dispatch(isFetchingTrue());
     dispatch(isFetching(true));
     dispatch(setCurrent(pageNumber));

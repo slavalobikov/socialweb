@@ -1,11 +1,14 @@
 import {ADD_NEW_POST_TEXT} from "../ActionTypes";
 import {profileAPI} from "../../api/api";
 import {isFetching} from "./UsersReducer";
+import {ProfilePageType, ProfileType} from "../../Types/types";
 
 const SET_STATUS_USER = "SET_STATUS_USER";
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
 const SET_PHOTO_USER = 'SET_PHOTO_USER';
 const SAVE_PHOTO_SUCCESS = 'SAVE_PHOTO_SUCCESS';
+
+
 let initialState = {
 
     profilePage: [
@@ -27,13 +30,16 @@ let initialState = {
             name: "Валерий Цепкало",
             img: "https://officelife.media/upload/iblock/a67/a673bdc2396a44e83b19b8a1665800d0.jpg"
         }
-    ],
+    ] as Array<ProfilePageType>,
     photo: '',
     status: "",
-    profile: null,
-
+    profile: null as ProfileType | null,
+    newPostText: "",
 };
-const ProfilePageReducer = (state = initialState, action) => {
+
+export type InitialStateType = typeof initialState
+
+const ProfilePageReducer = (state = initialState, action: any): InitialStateType => {
     switch (action.type) {
         case ADD_NEW_POST_TEXT: {
 
@@ -76,17 +82,33 @@ const ProfilePageReducer = (state = initialState, action) => {
 
 };
 
-export const setPhotoUser = (photo) => ({type: SET_PHOTO_USER, photo});
-export const setStatusUser = (status) => ({type: SET_STATUS_USER, status});
-export const savePhotoSuccess = (photos) => ({type: SAVE_PHOTO_SUCCESS, photos});
-export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile});
+type SetPhotoUserType = {
+    type: typeof SET_PHOTO_USER
+    photo: string
+}
+export const setPhotoUser = (photo: string):SetPhotoUserType => ({type: SET_PHOTO_USER, photo});
+type SetStatusUser = {
+    type: typeof SET_STATUS_USER
+    status: string
+}
+export const setStatusUser = (status: string): SetStatusUser => ({type: SET_STATUS_USER, status});
+type savePhotoSuccess = {
+    type: typeof SAVE_PHOTO_SUCCESS
+    photos: string
+}
+export const savePhotoSuccess = (photos:string):savePhotoSuccess => ({type: SAVE_PHOTO_SUCCESS, photos});
+type setUserProfile = {
+    type: typeof SET_USER_PROFILE
+    profile: ProfileType
+}
+export const setUserProfile = (profile:ProfileType):setUserProfile => ({type: SET_USER_PROFILE, profile});
 
-export const getStatusThunk = (id) => async (dispatch) => {
+export const getStatusThunk = (id: number) => async (dispatch: any) => {
     let response = await profileAPI.getStatus(id);
     dispatch(setStatusUser(response))
 };
 
-export const getProfileThunk = (userID) => async (dispatch) => {
+export const getProfileThunk = (userID : number) => async (dispatch: any) => {
     dispatch(isFetching(true));
     let response = await profileAPI.getProfile(userID);
     dispatch(setPhotoUser(response.photos.large));
@@ -95,26 +117,27 @@ export const getProfileThunk = (userID) => async (dispatch) => {
     dispatch(isFetching(false))
 };
 
-export const updateStatusThunk = (status) => async (dispatch) => {
+export const updateStatusThunk = (status: string) => async (dispatch: any) => {
     let response = await profileAPI.updateStatus(status);
     if (response.data.resultCode === 0) {
         dispatch(setStatusUser(status))
     }
 };
-export const savePhoto = (file) => async (dispatch) => {
+export const savePhoto = (file: any) => async (dispatch: any) => {
     let response = await profileAPI.savePhoto(file);
     if (response.data.resultCode === 0) {
         dispatch(savePhotoSuccess(response.data.data.photos))
     }
 };
 
-export const saveProfile = (profile) => async (dispatch, getState) => {
+export const saveProfile = (profile: ProfileType) => async (dispatch: any, getState: any) => {
     const userID = getState().AuthPageReducer.id;
     const response = await profileAPI.saveProfile(profile);
     if (response.data.resultCode === 0) {
         dispatch(getProfileThunk(userID))
     } else {
-        alert(`Ошибка в валидации: ' ${response.data.messages.map(e => e)}`)
+        alert('Ошибка в валидации')
+        //alert(`Ошибка в валидации: ${response.data.messages.map(e => e)}`)
 
         /*
                 dispatch(isFetching(true));

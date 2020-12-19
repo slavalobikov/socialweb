@@ -11,3 +11,40 @@
     padding: 5px;
     color: red;
 }
+
+
+.Input {
+    position: relative;
+    color: white;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    width: 50%;
+    height: 50px;
+    font-size: 24px;
+    z-index: 2;
+    margin: 10px 0;
+}
+
+.Input:focus {
+    outline: none;
+}
+
+.Input:focus ~ .Label {
+    margin-bottom: 50px;
+    font-size: 16px;
+}
+
+.Label {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+    transition: margin-bottom .15s ease;
+    z-index: 1;
+}
+
+.formControl div {
+    display: flex;
+    justify-content: center;
+}

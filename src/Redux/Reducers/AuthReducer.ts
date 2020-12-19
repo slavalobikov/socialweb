@@ -3,10 +3,19 @@ import {stopSubmit} from "redux-form"
 import {isFetching} from "./UsersReducer";
 
 const SET_HELLO ='SET_HELLO';
-
 const SET_USER_DATA = 'SET_USER_DATA';
 const LOGOUT = 'LOGOUT';
-let initialState = {
+
+export type InitialStateType = {
+    id: number | null
+    email: string | null
+    login: string | null
+    isAuth: boolean
+    password: null | string
+    rememberMe: boolean | null
+    hello: false
+}
+let initialState:InitialStateType = {
     id:null,
     email:null,
     login:null,
@@ -16,7 +25,7 @@ let initialState = {
     hello: false
 };
 
-const AuthPageReducer = (state = initialState, action) => {
+const AuthPageReducer = (state = initialState, action: any) => {
     switch (action.type) {
         case SET_USER_DATA:
             return {
@@ -38,13 +47,30 @@ const AuthPageReducer = (state = initialState, action) => {
     }
 };
 
-export const logoutAC = () => ({type: LOGOUT})
+type LogoutACType = {
+    type: typeof LOGOUT
+}
 
-export const HelloAC = (bool) => ({type:SET_HELLO, bool})
+export const logoutAC = ():LogoutACType => ({type: LOGOUT})
 
-export const setUserData = (id, email, login, isAuth) => ({type:SET_USER_DATA, payload:{id, email, login, isAuth} });
 
-export const setDataLoginThunk = (email, password) => async (dispatch) => {
+type ActionPayloadType = {
+    id: number | null
+    email:string | null
+    login:string | null
+    isAuth:boolean
+}
+
+type SetUserDataActionType = {
+    type: typeof SET_USER_DATA
+    payload:ActionPayloadType
+}
+
+export const setUserData = (id: number | null, email:string | null, login:string | null, isAuth:boolean): SetUserDataActionType =>
+    ({type:SET_USER_DATA, payload:{id, email, login, isAuth} });
+
+export const setDataLoginThunk = (email:any, password:any) => async (dispatch: any) => {
+        dispatch(isFetching(true))
         let response = await authAPI.login(email, password, );
             if (response.data.resultCode === 0) {
                 dispatch(authmeThunk())
@@ -52,20 +78,20 @@ export const setDataLoginThunk = (email, password) => async (dispatch) => {
                 let message = response.data.messages.length > 0 ? response.data.messages[0] : "Ошибка"
                 dispatch(stopSubmit("login", {_error:message }))
             }
+            dispatch(isFetching(false))
     };
 
 
-export const authmeThunk = () => async (dispatch) => {
-        let response = await  authAPI.authme();
-    dispatch(isFetching(true));
+export const authmeThunk = () => async (dispatch: any) => {
+    let response = await  authAPI.authme();
     if (response.resultCode === 0) {
                 dispatch(setUserData(response.data.id, response.data.email, response.data.login , true))
             }
-    dispatch(isFetching(false));
+
 
 };
 
-export const logout = (bool) => async (dispatch) => {
+export const logout = (bool: any) => async (dispatch: any) => {
         let response = await authAPI.logout();
         if (response.data.resultCode === 0){
             dispatch(setUserData(null, null, null, false))
