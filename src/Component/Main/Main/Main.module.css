@@ -1,6 +1,6 @@
 .content {
     background-color: darkgray;
-    padding-top: 150px;
+    padding-top: 60px;
     display: grid;
     grid-template-areas:
     "ava me me"
@@ -32,9 +32,6 @@
 .me {
     grid-area: me;
     text-align: center;
-    /*
-    border: 3px yellow double;
-    */
     background-color: whitesmoke;
     margin-left: 20px;
     margin-right: 20px;

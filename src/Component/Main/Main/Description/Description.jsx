@@ -1,19 +1,12 @@
 import React, {useState} from 'react';
-import {/*Field,*/ reduxForm} from "redux-form";
-/*
-import {Input} from "../../../../common/FormConrols/FormsControls";
-*/
+import {reduxForm} from "redux-form";
+
 import s from './Description.module.css';
-/*
-import Preloader from "../../../../common/Preloader";
-*/
 
 
 
-const Description = (/*{contacts, lookingForAJob, handleSubmit, isOwner, saveProfile, } ,*/props) => {
 
-
-
+const Description = (props) => {
 
     const [fullName, setFullName] = useState( props.profile.fullName);
     const [github, setGithub] = useState( props.contacts.github);

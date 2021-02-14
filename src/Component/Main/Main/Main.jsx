@@ -8,14 +8,16 @@ import StatusHook from "./Status/StatusWithHook";
 import DescriptionContainer from "./Description/DescriptionContainer";
 
 
+
+
 const Main = (props) => {
 
     if (!props.profile) {
         return <Preloader/>
     }
-    const handleSubmit = (formData) => {
+/*    const handleSubmit = (formData) => {
         console.log('formData', formData)
-    };
+    };*/
     let PostElement = props.profilePage.map(p => <Post img={p.img} text={p.text} key={p.id}
                                                        name={p.name} fullname={props.profile.fullName}
                                                        photo={props.profile.photos.large}/>);
@@ -48,7 +50,7 @@ const Main = (props) => {
                 <div>Обо мне: {props.profile.aboutMe}</div>
             </div>
             {!props.isOwner && <div className={s.zero}></div>}
-            <DescriptionContainer handleSubmit={handleSubmit} contacts={props.profile.contacts}
+            <DescriptionContainer  contacts={props.profile.contacts}
                                   lookingForAJob={props.lookingForAJob} isOwner={props.isOwner}/>
             {props.isOwner && <div className={s.posts}>
                 <AddPostFormRedux onSubmit={addNewPost}/>

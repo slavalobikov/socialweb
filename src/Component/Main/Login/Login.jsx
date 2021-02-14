@@ -1,15 +1,10 @@
 import React from 'react';
 import s from './Login.module.css'
-import {Field, reduxForm} from "redux-form";
 import {connect} from "react-redux";
-import {setDataLoginThunk} from "../../../Redux/Reducers/AuthReducer";
-/*
-import {Input} from "../../../common/FormConrols/FormsControls";
-*/
-import {required} from "../../../utils/validators/validators";
+import  {setDataLoginThunk} from "../../../Redux/Reducers/AuthReducer";
+
 import {Redirect} from "react-router-dom";
-import style from "./../../../common/FormConrols/FormsControls.module.css"
-import Preloader from "../../../common/Preloader";
+
 
 import { Form, Input, Button, Checkbox } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
@@ -19,18 +14,10 @@ import 'antd/dist/antd.css';
 const Login = (props) => {
 
 
-/*    const onSubmit = (formData) => {
-        props.setDataLoginThunk(formData.Login, formData.Password);
-        console.log(formData.Password)
-    };*/
-
     if (props.isAuth) {
         return <Redirect to="/profile"/>
     }
 
-/*    if (props.isFetching) {
-        return <Preloader/>
-    }*/
 
     return (
         <div className={s.login}>
@@ -43,6 +30,7 @@ const Login = (props) => {
                         <NormalLoginForm
                             isFetching={props.isFetching}
                             setDataLoginThunk={props.setDataLoginThunk} />
+                        {!!props.error && <div className={s.error}>{props.error}</div>}
                     </div>
                 </div>
             </div>
@@ -51,7 +39,6 @@ const Login = (props) => {
 };
 
 const NormalLoginForm = (props) => {
-    console.log(props)
     const onFinish = (values) => {
         props.setDataLoginThunk(values.username, values.password)
     };
@@ -70,7 +57,7 @@ const NormalLoginForm = (props) => {
                 rules={[
                     {
                         required: true,
-                        message: 'Please input your Username!',
+                        message: 'Введите ваш логин!',
                     },
                 ]}
             >
@@ -81,7 +68,7 @@ const NormalLoginForm = (props) => {
                 rules={[
                     {
                         required: true,
-                        message: 'Please input your Password!',
+                        message: 'Введите ваш пароль!',
                     },
                 ]}
             >
@@ -96,9 +83,7 @@ const NormalLoginForm = (props) => {
                     <Checkbox>Remember me</Checkbox>
                 </Form.Item>
 
-                <a className="login-form-forgot" href="">
-                    Forgot password
-                </a>
+
             </Form.Item>
 
             <Form.Item>
@@ -111,68 +96,18 @@ const NormalLoginForm = (props) => {
                     Войти
                 </Button>
                 }
-                Or <a href="">register now!</a>
+                <span>Or <a href="https://social-network.samuraijs.com/signUp">register now!</a></span>
             </Form.Item>
         </Form>
     );
 };
-/*
-const LoginForm = (props) => {
-    return (
-        /!*<div className={s.background}>
-            <div className={s.box}>
-                <h1>Авторизация</h1>
-
-                <form onSubmit={props.handleSubmit}>
-                    <div className={s.inputBlock}>
-                        <Field className={s.auth} placeholder='login' name={"Login"} component={Input}
-                               validate={[required]}/>
-                        <label className={s.label} >Login</label>
-
-                    </div>
-                    <div className={s.inputBlock}>
-                        <Field className={s.auth} placeholder='password' name={"Password"} type={"password"} component={Input}
-                               validate={[required]} />
-                        <label className={s.label} >Пароль</label>
-
-                    </div>
-
-                    { props.error && <div className={style.formSummaryError}>
-                        {props.error}
-                    </div>}
-                    <div className={s.btn}><button> Войти в акаунт </button></div>
-                </form>
-            </div>
-
-        </div>*!/
-
-        <div className={s.wrapper}>
-        <div className={s.main}>
-        <h1 className={s.authorization}>Авторизация</h1>
-    <form onSubmit={props.handleSubmit}>
-        <div className={s.field}>
-            <Field id="login" name={"Login"} component={Input}
-                   validate={[required]} text={'login'}/>
-        </div>
-        <div className={s.field}>
-            <Field id="passwd" name={"Password"} type={"password"} component={Input}
-                   validate={[required]} text={'password'} />
-        </div>
-        <div className={s.btn}><button> Войти в акаунт </button></div>
-    </form>
-    </div>
-
-</div>
-    )
-};
-
-
-const LoginReduxForm = reduxForm({form: 'login'})(LoginForm);*/
 
 
 const mapStateToProps = (state) => ({
     isAuth: state.AuthPageReducer.isAuth,
     isFetching: state.UsersPageReducer.isFetching,
+    error: state.AuthPageReducer.error,
+
 });
 
 export default connect(mapStateToProps, {setDataLoginThunk})(Login);

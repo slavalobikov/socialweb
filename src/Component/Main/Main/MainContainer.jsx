@@ -4,6 +4,7 @@ import React from 'react'
 import Main from "./Main";
 import {ADD_NEW_POST_TEXT,} from "../../../Redux/ActionTypes";
 import {
+    addNewPostText,
     getProfileThunk, savePhoto,
     setPhotoUser,
 
@@ -54,7 +55,7 @@ let mapStateToProps = (state) => ( {
 let mapDispatchToProps = (dispatch) => {
     return {
         addPost:(newPostBody) => {
-            dispatch(ADD_NEW_POST_TEXT(newPostBody))
+            dispatch(addNewPostText(newPostBody))
         },
         setPhotoUser:(photo) => {
             dispatch(setPhotoUser(photo))

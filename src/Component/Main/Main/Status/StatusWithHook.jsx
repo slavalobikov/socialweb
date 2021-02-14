@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 
 import s from './StatusWithHook.module.css'
-const StatusHook = (props) => {
+const StatusHook =  (props) => {
 
     let userID = props.userID;
     if (!userID) {

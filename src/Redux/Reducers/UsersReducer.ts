@@ -1,23 +1,28 @@
 import {userAPI} from "../../api/api";
 import {updateObjectInArray} from "../../utils/objectHelplers";
-import {PhotosType, UsersType} from "../../Types/types";
+import {UsersType} from "../../Types/types";
+import {ThunkAction} from "redux-thunk";
+import {AppStateType} from "../ReduxStore";
+import { Dispatch } from "redux";
+
 
 
 
 let initialState = {
     users: [] as Array<UsersType> ,
-    pageSize: 25,
+    pageSize: 7,
     totalUsers: 0,
     currentPage: 1,
     isFetching: false,
     isDisabled: [] as Array<number>,
-    status:''
+    status:'',
+    countUsersAuto:0
 };
 
 export type InitialStateType = typeof initialState
 
 
-const UsersPageReducer = (state = initialState, action:any):InitialStateType => {
+const UsersPageReducer = (state = initialState, action:ActionsTypes):InitialStateType => {
 
 
     switch (action.type) {
@@ -65,12 +70,23 @@ const UsersPageReducer = (state = initialState, action:any):InitialStateType => 
                     : state.isDisabled.filter(id => id !== action.id)
             }
         }
+        case GET_ADD_USER: {
+            return {
+                ...state,
+                users: [...state.users, ...action.users],
+                countUsersAuto:action.countUsersAuto++
+
+            }
+        }
         default:
             return state;
     }
 
 
 };
+
+type ActionsTypes = SetUsers | SetCurrent | getAddUsers
+    | SetTotalUsersCount | Follow | Unfollow | IsDisabled | IsFetching;
 
 type SetUsers = {
     type: typeof SET_USERS
@@ -81,6 +97,15 @@ type SetCurrent = {
     type: typeof SET_CURRENT_PAGE
     currentPage: number
 }
+
+type getAddUsers = {
+    type: typeof GET_ADD_USER
+    users: Array<UsersType>
+    countUsersAuto: number
+}
+
+export const getAddUsers = (users:Array<UsersType>, countUsersAuto:number):getAddUsers => ({type:GET_ADD_USER, users, countUsersAuto });
+
 export const setCurrent = (currentPage: number):SetCurrent => ({type: SET_CURRENT_PAGE, currentPage});
 type SetTotalUsersCount = {
     type: typeof SET_TOTAL_USERS_COUNT
@@ -115,7 +140,7 @@ type IsDisabled = {
 export const isDisabled = (bool: boolean, id: number):IsDisabled => {
     return ({type: IS_DISABLED, bool, id})
 };
-type IsFetching = {
+export type IsFetching = {
     type: typeof IS_FETCHING
     bool: boolean
 }
@@ -131,9 +156,15 @@ const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
 
 const IS_DISABLED = 'IS_DISABLED';
 const IS_FETCHING = 'IS_FETCHING';
+const GET_ADD_USER = 'GET_ADD_USER';
 
-export const getUserAC = (currentPage:number, pageSize:number) => {
-    return async (dispatch: any) => {
+type ThunkType = ThunkAction<Promise<void>, AppStateType, unknown, ActionsTypes>;
+
+
+
+export const getUserAC = (currentPage:number, pageSize:number)
+    : ThunkType => {
+    return async (dispatch, getState) => {
         dispatch(isFetching(true));
         let response = await userAPI.getUsers(currentPage, pageSize);
         dispatch(setUsers(response.items));
@@ -143,7 +174,7 @@ export const getUserAC = (currentPage:number, pageSize:number) => {
 };
 
 
-const followUnfollowFlow = async (dispatch:any, id:number, apiMethod:any, actionCreator:any ) => {
+const followUnfollowFlow = async (dispatch:Dispatch<ActionsTypes>, id:number, apiMethod:any, actionCreator:  any) => {
     dispatch(isDisabled(true, id));
     let response = await apiMethod(id);
     if (response === 0) {
@@ -151,25 +182,29 @@ const followUnfollowFlow = async (dispatch:any, id:number, apiMethod:any, action
     }
     dispatch(isDisabled(false, id))
 };
-export const followUserThunk = (id:number) => async (dispatch: any) => {
+export const followUserThunk = (id:number): ThunkType => async (dispatch) => {
     let apiMethod = userAPI.followUser.bind(userAPI);
-    let actionCreator = follow;
-    followUnfollowFlow(dispatch, id, apiMethod, actionCreator)
+    let FollowSuccess = follow;
+    followUnfollowFlow(dispatch, id, apiMethod, FollowSuccess)
 };
-export const unfollowUserThunk = (id:number) => async (dispatch:any) => {
+export const unfollowUserThunk = (id:number): ThunkType => async (dispatch) => {
     let apiMethod = userAPI.unfollowUser.bind(userAPI);
-    let actionCreator = unfollow;
-    followUnfollowFlow(dispatch, id, apiMethod, actionCreator)
+    let UnFollowSucceess = unfollow;
+    followUnfollowFlow(dispatch, id, apiMethod, UnFollowSucceess)
 };
 
-export const onPageChangedThunk = (pageNumber: number, pageSize: number) => async (dispatch:any) => {
-    //dispatch(isFetchingTrue());
+export const onPageChangedThunk = (pageNumber: number, pageSize: number): ThunkType => async (dispatch) => {
     dispatch(isFetching(true));
     dispatch(setCurrent(pageNumber));
     let response = await userAPI.getUsers(pageNumber, pageSize);
     dispatch(setUsers(response.items));
-    //dispatch(isFetchingFalse());
     dispatch(isFetching(false))
 };
+
+export const getAddUsersThunk = (currentPage: number, pageSize: number, countUsersAuto:number): ThunkType => async (dispatch) => {
+
+    let response = await userAPI.getUsers(currentPage + 1, pageSize)
+    dispatch(getAddUsers(response.items, countUsersAuto))
+}
 
 export default UsersPageReducer;
